@@ -1,6 +1,8 @@
 # jbouny
 Personal website build with wintersmith
 
+http://jeremybouny.fr
+
 ## Build
 
 ```
