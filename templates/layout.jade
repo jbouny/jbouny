@@ -1,0 +1,63 @@
+doctype html
+block vars
+  - var bodyclass = null;
+  
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(name='description', content='Portail professionnel de Jérémy BOUNY')
+      meta(name='robots', content='INDEX, FOLLOW')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title
+        block title
+          = locals.name
+      link(rel='alternate', href=env.helpers.makeRelative(page.url, '/feed.xml'), type='application/rss+xml', title=locals.description)
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
+      link(rel='stylesheet', href=env.helpers.makeRelative(page.url, '/css/bootstrap-yeti.min.css'))
+      link(rel='stylesheet', href=env.helpers.makeRelative(page.url, '/css/modern-business.css'))
+      link(rel='stylesheet', href=env.helpers.makeRelative(page.url, '/css/style.css'))
+      
+  body.bodyclass
+  
+    header.navbar.navbar-default.navbar-fixed-top(role="navigation")
+      div.container
+        div.navbar-header
+          button.navbar-toggle(data-toggle="collapse", data-target="#navbar-main")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href=env.helpers.makeRelative(page.url, "/index.html"))= locals.name
+          
+        nav.collapse.navbar-collapse#navbar-main
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href=env.helpers.makeRelative(page.url, "/index.html")) Accueil
+            li
+              a(href=env.helpers.makeRelative(page.url, "/experiences.html")) Expériences
+            li
+              a(href=env.helpers.makeRelative(page.url, "/competences.html")) Compétences
+            li
+              a(href=env.helpers.makeRelative(page.url, "/formations.html")) Formations
+            //-li
+            //-  a(href=env.helpers.makeRelative(page.url, "/blog.html")) Blog
+            li
+              a(href=env.helpers.makeRelative(page.url, "/contact.html")) Contact
+                  
+    block header
+      
+    div.container
+      block content
+          
+      footer
+        div.row
+          div.col-lg-12
+            p
+              hr
+              !=contents['footer.md'].html
+              
+    script(src=env.helpers.makeRelative(page.url, '/js/jquery.min.js'))
+    script(src=env.helpers.makeRelative(page.url, '/js/bootstrap.min.js'))
+    block script

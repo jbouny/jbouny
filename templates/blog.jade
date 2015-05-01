@@ -1,0 +1,26 @@
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+  
+block content
+  div.row
+    div.col-lg-12
+      h1.page-header= page.title
+
+      - var articles = env.helpers.getArticles(contents)
+      each article in articles
+        article.article.intro
+          header
+            p.date
+              span= moment.utc(article.date).format('DD. MMMM YYYY')
+            h2
+              a(href=env.helpers.makeRelative(page.url, article.url))= article.title
+            if article.intro.length > 0
+              | !{ typogr(article.intro).typogrify() }
+            if article.hasMore
+              p.more
+                a(href=env.helpers.makeRelative(page.url, article.url)) more
+        hr
+
+

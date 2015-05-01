@@ -1,0 +1,35 @@
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+  
+block content
+  section.row
+    div.col-lg-12
+      header
+        h1= page.title
+    div.col-md-3.col-sm-12
+      | !{ typogr(page.html).typogrify() }
+    div.col-md-9.col-sm-12#map-canvas(style="height:350px")
+
+block script
+  script(src='https://maps.googleapis.com/maps/api/js')
+  script.
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var markerPosition = new google.maps.LatLng(45.777068, 3.086977);
+      var mapOptions = {
+        center: markerPosition,
+        zoom: 5,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      
+      var marker = new google.maps.Marker({
+        position: markerPosition,
+        map: map,
+        title:"#{locals.name}"
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);

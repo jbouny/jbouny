@@ -1,0 +1,27 @@
+{
+  "locals": {
+    "url": "",
+    "name": "Jérémy BOUNY",
+    "owner": "Jérémy BOUNY",
+    "description": "Portail professionnel - Jérémy BOUNY"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "./plugins/makerelative.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}

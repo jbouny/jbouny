@@ -1,0 +1,49 @@
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+  
+block content
+  div.row
+    div.col-lg-12
+      header
+        h1= page.title
+      
+      - var skills = contents['skills.json']
+      
+      section.row
+        div.col-lg-12          
+          //- http://codepen.io/tamak/pen/hzEer
+          each data, skill in skills.metadata
+            div.skillbar.clearfix
+              div.skillbar-title(style="background-color:" + data.colors[0] + ";")
+                span= skill
+              div.skillbar-bar(style="background-color:" + data.colors[1] + ";", data-percent=data.score + "%")
+              div.skill-bar-percent #{data.score}%
+      
+      hr
+
+      section.row
+        div.col-lg-12   
+          
+          - var projects = env.helpers.getProjects(contents)
+          
+          div.row
+            each data, category in skills.metadata
+              article.col-md-4.col-sm-12.competence
+                div.panel.panel-default
+                  header.panel-heading(style="background-color:" + data.colors[0] + ";")= category
+                  div.panel-body
+                    ul
+                    each line in data.content
+                      li !{line}
+
+block script
+  script.
+    jQuery( document ).ready( function AnimateSkillbars() {
+      jQuery('.skillbar .skillbar-bar').each(function AnimateSkillbar( index ) {
+        jQuery( this ).animate( {
+          width:jQuery(this).attr('data-percent')
+        }, 1500 + index * 250 );
+      } );
+    } );

@@ -1,0 +1,68 @@
+{
+  "2D/3D temps réel": {
+    "score": 90,
+    "colors": ["#39BE61", "#58D27D"],
+    "content": [
+        "<span>API Graphiques :</span> OpenGL, OpenGL ES, WebGL",
+        "<span>Shaders :</span> GLSL, HLSL",
+        "<span>Moteurs 2D & 3D :</span> Three.js, Unity 3D, Ogre 3D, Pixi.js",
+        "<span>Moteur physique :</span> Box2d",
+        "<span>Domaines :</span> Jeux vidéos, réalité virtuelle, réalité augmentée"
+    ]
+  },
+  "Vision par ordinateur": {
+    "score": 80,
+    "colors": ["#D94184", "#E5609A"],
+    "content": [
+      "<span>Traitement d'image :</span> OpenCV, CImg",
+      "<span>Bibliothèque traitement 3D :</span> Ceres-solver, OpenMVG",
+      "<span>Récupération de flux 2D & 3D :</span> OpenNI, MMAL, VLC",
+      "<span>Domaines :</span> Reconstruction 3D (SfM), analyse d'image, suivi de personnes, déformation d'image"
+    ]
+  },
+  "Développement logiciel": {
+    "score": 100,
+    "colors": ["#3D6BAA", "#5C88C4"],
+    "content": [
+      "<span>Langages principaux :</span> C++, C, C#, Python, Java, JavaScript",
+      "<span>Interfaces graphiques :</span> Qt, WPF, Swing, Tkinter",
+      "Manipulation et administration de bases de données",
+      "Notions de développement mobile iOS et Android",
+      "<span>Domaines :</span> Réalité virtuelle, logiciels bureautique, développement mobile"
+    ]
+  },
+  "Informatique embarquée": {
+    "score": 80,
+    "colors": ["#FFBC4C", "#FFC76B"],
+    "content": [
+      "<span>Raspberry PI :</span> Manipulation GPIO, API MMAL",
+      "Réalisation de schémas électroniques basiques",
+      "Traitement de flux vidéo haute résolution temps réel",
+      "<span>Prototypage :</span> Impression 3D, circuits électroniques",
+      "<span>Domaines :</span> Caméras intélligentes, suivi optique, robotique"
+    ]
+  },
+  "Développement web": {
+    "score": 100,
+    "colors": ["#FF8D4C", "#FFA06B"],
+    "content": [
+      "<span>HTML5 :</span> Canvas 2D, WebGL, WebSockets, Web Workers",
+      "<span>CMS :</span> WordPress, Drupal",
+      "<span>Techno côté serveur :</span> PHP, Node.js, JEE, IIS",
+      "<span>Autre :</span> Génération statique",
+      "<span>Domaines :</span> Application web, application interactives, contrôle à distance"
+    ]
+  },
+  "Systèmes informatiques": {
+    "score": 70,
+    "colors": ["#2F9E9A", "#4EBBB7"],
+    "content": [
+      "<span>Réseau :</span> Protocoles UDP, TCP, OSC, VRPN",
+      "<span>Serveur :</span> Mise en place et maintenance",
+      "<span>Serveur gestion de versions :</span> SVN, Git, GitLab",
+      "<span>Intégration continue :</span> Jenkins",
+      "Cryptographie et sécurité",
+      "<span>Domaines :</span> Objets connectés, serveurs web, outils de développement"
+    ]
+  }
+}

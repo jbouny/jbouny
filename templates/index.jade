@@ -1,0 +1,68 @@
+extends layout
+
+block append vars
+  - page = { url: '/' }
+
+block header
+  
+  include carousel.jade
+
+block content
+          
+  section.row
+    div.col-lg-12
+      header
+        h1 Ingénieur R&D à Catopsys
+    
+    p
+      - var headers = env.helpers.getHeaders(contents)
+      each header in headers
+        article.col-md-4
+          div.panel.panel-default
+            header.panel-heading
+              h4= header.title
+            div.panel-body
+              p
+                | !{ typogr(header.html).typogrify() }
+          
+  div.row
+    - var keywords = contents['keywords.json']
+    div.col-md-4
+      h2.page-header Mots clés
+    div.col-md-8
+      h2.page-header Démos
+      
+  div.row
+    section.col-md-4.keywords
+      h4
+        each keyword in keywords.metadata
+          span.label.label-success= keyword
+          //
+      
+    section.col-md-8
+      mixin display_project(project)
+        div.col-lg-3.col-md-3.col-sm-6
+          div.media
+            div.pull-left
+              a(href=project.metadata.url, target="_blank")
+                img(src=project.metadata.image)
+            div.media-body
+              h4.media-heading
+                a(href=project.metadata.url, target="_blank")= project.title
+              p
+                | !{ typogr(project.html.substring(0, 50)).typogrify() }...
+          
+      div.row
+        - var projects = env.helpers.getProjects(contents)
+        each project in projects.slice(0, 4)
+          +display_project(project)
+      div.row
+        a.btn.btn-default.btn-block(href=env.helpers.makeRelative(page.url, "/experiences.html#projets")) Voir plus
+
+block script
+  script.
+    $('.carousel').carousel({
+      interval: 5000 //changes the speed
+    })
+
+

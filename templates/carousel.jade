@@ -1,0 +1,31 @@
+header#carousel(class="carousel slide")
+  
+  - var carousels = contents['carousel-index']
+  - var i = 0
+
+  ol.carousel-indicators
+    each carousel in carousels
+      if i++ === 0
+        li.active(data-target="#carousel", data-slide-to=i)
+      else
+        li(data-target="#carousel", data-slide-to=i)
+    
+  - var i = 0
+  div.carousel-inner
+    mixin carousel_block(carousel)
+      div.fill(style="background-image:url('" + carousel.metadata.image + "');")
+      div.carousel-caption
+        h2
+          a(target="_blank", href=carousel.metadata.url)= carousel.metadata.caption
+    each carousel in carousels
+      if i++ === 0
+        div.item.active
+          +carousel_block(carousel)
+      else
+        div.item
+          +carousel_block(carousel)
+        
+  a.left.carousel-control(href="#carousel", data-slide="prev")
+    span.icon-prev
+  a.right.carousel-control(href="#carousel", data-slide="next")
+      span.icon-next

@@ -1,0 +1,35 @@
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+  
+block content
+  div.row
+    div.col-lg-12
+      h1= page.title
+      
+      - var formations = env.helpers.getFormations(contents)
+      section.row
+        div.col-lg-12          
+          //- http://codepen.io/tamak/pen/hzEer
+          each formation in formations
+            article.media.formation
+              div.media-left
+                div.media-object.text-center.bg-primary= formation.metadata.date
+              div.media-body
+                header
+                  h4.media-heading= formation.title
+                  p.text-primary= formation.metadata.location
+                - if (formation.html.length > 0)
+                  p
+                    | !{ typogr(formation.html).typogrify() }
+            hr
+block script
+  script.
+    jQuery( document ).ready( function AnimateSkillbars() {
+      jQuery('.skillbar .skillbar-bar').each(function AnimateSkillbar( index ) {
+        jQuery( this ).animate( {
+          width:jQuery(this).attr('data-percent')
+        }, 1500 + index * 250 );
+      } );
+    } );

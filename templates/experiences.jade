@@ -1,0 +1,59 @@
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+  
+block content
+  div.row
+    div.col-lg-12
+      header
+        h1= page.title
+      
+      section.row
+        header.col-lg-12
+          h2.page-header#experience Expériences professionnelles
+        
+        mixin display_experience(experience)
+          article.col-md-4.col-sm-12.experience
+            div.panel.panel-default
+              header.panel-heading
+                h4.text-center= experience.title
+                h5.text-center= experience.metadata.date
+                img.img-responsive(src=experience.metadata.image)
+              div.panel-body
+                | !{ typogr(experience.html).typogrify() }
+          
+        - var experiences = env.helpers.getExperiences(contents)
+        - var i = 0, length = experiences.length
+        while i < length
+          div.row
+            - var j = 0
+            while j++ < 3 && i < length
+              +display_experience(experiences[i])
+              - i++
+                
+      section.row
+        div.col-lg-12
+          header
+            h2.page-header#projets Projets & Démos
+            
+          p L’ensemble de ces démos sont a retrouver directement sur 
+            a(href="https://github.com/jbouny") GitHub 
+              img(src=env.helpers.makeRelative(page.url, "images/icons/github.png"), alt="Github")
+          
+          mixin display_project(project)
+            article.col-lg-3.col-md-3.col-sm-6
+              div.media
+                div.pull-left
+                  a(href=project.metadata.url, target="_blank")
+                    img(src=project.metadata.image)
+                div.media-body
+                  header
+                    h4.media-heading
+                      a(href=project.metadata.url, target="_blank")= project.title
+                  p
+                    | !{ typogr(project.html).typogrify() }
+          
+          - var projects = env.helpers.getProjects(contents)
+          each project in projects
+            +display_project(project)
