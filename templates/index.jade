@@ -24,22 +24,20 @@ block content
             div.panel-body
               p
                 | !{ typogr(header.html).typogrify() }
-          
-  div.row
-    - var keywords = contents['keywords.json']
-    div.col-md-4
-      h2.page-header Mots clés
-    div.col-md-8
-      h2.page-header Démos
       
   div.row
     section.col-md-4.keywords
+      header
+        h2.page-header Mots clés
       h4
+        - var keywords = contents['keywords.json']
         each keyword in keywords.metadata
           span.label.label-success= keyword
           //
       
     section.col-md-8
+      header
+        h2.page-header Démos
       mixin display_project(project)
         div.col-lg-3.col-md-3.col-sm-6
           div.media
