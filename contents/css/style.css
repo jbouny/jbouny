@@ -50,13 +50,17 @@
 	border-bottom-left-radius:3px;
 }
 
+.skillbar-offset {
+  margin-left: 200px;
+}
+
 .skillbar-bar {
 	height:35px;
 	width:0px;
 	background:#6adcfa;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
+	border-radius:0px 3px 3px 0px;
+	-moz-border-radius:0px 3px 3px 0px;
+	-webkit-border-radius:0px 3px 3px 0px;
 }
 
 .skill-bar-percent {

@@ -18,7 +18,8 @@ block content
             div.skillbar.clearfix
               div.skillbar-title(style="background-color:" + data.colors[0] + ";")
                 span= skill
-              div.skillbar-bar(style="background-color:" + data.colors[1] + ";", data-percent=data.score + "%")
+              div.skillbar-offset
+                div.skillbar-bar(style="background-color:" + data.colors[1] + ";", data-percent=data.score + "%")
               div.skill-bar-percent #{data.score}%
       
       hr
