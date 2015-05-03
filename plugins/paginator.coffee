@@ -58,7 +58,10 @@ module.exports = (env, callback) ->
     return contents['footer.md']
     
   getSkills = (contents) ->
-    return contents['skills.json']
+    return contents['skills.json']  
+    
+  getKeywords = (contents) ->
+    return contents['keywords.json']  
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
@@ -127,6 +130,7 @@ module.exports = (env, callback) ->
   env.helpers.getFormations = getFormations
   env.helpers.getFooter = getFooter
   env.helpers.getSkills = getSkills
+  env.helpers.getKeywords = getKeywords
 
   # tell the plugin manager we are done
   callback()

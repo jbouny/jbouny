@@ -13,6 +13,7 @@ block content
         div.col-lg-12          
           //- http://codepen.io/tamak/pen/hzEer
           each formation in formations
+            hr
             article.media.formation
               div.media-left
                 div.media-object.text-center.bg-primary= formation.metadata.date
@@ -23,7 +24,6 @@ block content
                 - if (formation.html.length > 0)
                   p
                     | !{ typogr(formation.html).typogrify() }
-            hr
 block script
   script.
     jQuery( document ).ready( function AnimateSkillbars() {

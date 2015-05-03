@@ -6,6 +6,7 @@
     "description": "Portail professionnel - Jérémy BOUNY"
   },
   "plugins": [
+    "./plugins/i18n.coffee",
     "./plugins/paginator.coffee",
     "./plugins/makerelative.coffee"
   ],

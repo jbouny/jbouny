@@ -1,8 +1,9 @@
 doctype html
 block vars
   - var bodyclass = null;
-  
-html(lang='en')
+
+- env.helpers.checkLanguage(page)
+html(lang=env.helpers.getLanguage())
   head
     block head
       meta(charset='utf-8')
@@ -34,17 +35,17 @@ html(lang='en')
         nav.collapse.navbar-collapse#navbar-main
           ul.nav.navbar-nav.navbar-right
             li
-              a(href=env.helpers.makeRelative(page.url, "/index.html")) Accueil
+              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/index.html"))= env.helpers.s('LAB_HOME')
             li
-              a(href=env.helpers.makeRelative(page.url, "/experiences.html")) Expériences
+              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/experiences.html"))= env.helpers.s('LAB_EXPERIENCES')
             li
-              a(href=env.helpers.makeRelative(page.url, "/competences.html")) Compétences
+              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/competences.html"))= env.helpers.s('LAB_COMPETENCES')
             li
-              a(href=env.helpers.makeRelative(page.url, "/formations.html")) Formations
+              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/formations.html"))= env.helpers.s('LAB_FORMATIONS')
             //-li
-            //-  a(href=env.helpers.makeRelative(page.url, "/blog.html")) Blog
+            //-  a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/blog.html"))= env.helpers.s('LAB_BLOG')
             li
-              a(href=env.helpers.makeRelative(page.url, "/contact.html")) Contact
+              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/contact.html"))= env.helpers.s('LAB_CONTACT')
                   
     block header
       

@@ -1,7 +1,8 @@
 extends layout
 
 block append vars
-  - page = { url: '/' }
+  - if( typeof page == 'undefined' )
+    - page = {url:'/'}
 
 block header
   
@@ -12,7 +13,8 @@ block content
   section.row
     div.col-lg-12
       header
-        h1 Ingénieur R&D à Catopsys
+        h1= env.helpers.s('DESC_POSTE')
+        hr
     
     p
       - var headers = env.helpers.getHeaders(contents)
@@ -28,16 +30,16 @@ block content
   div.row
     section.col-md-4.keywords
       header
-        h2.page-header Mots clés
+        h2.page-header= env.helpers.s('LAB_KEYWORDS')
       h4
-        - var keywords = contents['keywords.json']
+        - var keywords = env.helpers.getKeywords(contents)
         each keyword in keywords.metadata
           span.label.label-success= keyword
           //
       
     section.col-md-8
       header
-        h2.page-header Démos
+        h2.page-header= env.helpers.s('LAB_DEMOS')
       mixin display_project(project)
         div.col-lg-3.col-md-3.col-sm-6
           div.media
@@ -55,7 +57,7 @@ block content
         each project in projects.slice(0, 4)
           +display_project(project)
       div.row
-        a.btn.btn-default.btn-block(href=env.helpers.makeRelative(page.url, "/experiences.html#projets")) Voir plus
+        a.btn.btn-default.btn-block(href=env.helpers.makeRelative(page.url, "/experiences.html#projets"))= env.helpers.s('LAB_MORE')
 
 block script
   script.

@@ -11,7 +11,7 @@ block content
       
       section.row
         header.col-lg-12
-          h2.page-header#experience Expériences professionnelles
+          h2.page-header#experience= env.helpers.s('LAB_EXPERIENCES_PRO')
         
         mixin display_experience(experience)
           article.col-md-4.col-sm-12.experience
@@ -35,9 +35,9 @@ block content
       section.row
         div.col-lg-12
           header
-            h2.page-header#projets Projets & Démos
+            h2.page-header#projets= env.helpers.s('LAB_DEMOS')
             
-          p L’ensemble de ces démos sont a retrouver directement sur 
+          p= env.helpers.s('EXP_GITHUB')
             a(href="https://github.com/jbouny") GitHub 
               img(src=env.helpers.makeRelative(page.url, "images/icons/github.png"), alt="Github")
           
