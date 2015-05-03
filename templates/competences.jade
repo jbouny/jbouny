@@ -9,7 +9,7 @@ block content
       header
         h1= page.title
       
-      - var skills = contents['skills.json']
+      - var skills = env.helpers.getSkills(contents)
       
       section.row
         div.col-lg-12          

@@ -53,6 +53,12 @@ module.exports = (env, callback) ->
       pages.push value
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
+    
+  getFooter = (contents) ->
+    return contents['footer.md']
+    
+  getSkills = (contents) ->
+    return contents['skills.json']
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
@@ -119,6 +125,8 @@ module.exports = (env, callback) ->
   env.helpers.getProjects = getProjects
   env.helpers.getExperiences = getExperiences
   env.helpers.getFormations = getFormations
+  env.helpers.getFooter = getFooter
+  env.helpers.getSkills = getSkills
 
   # tell the plugin manager we are done
   callback()
