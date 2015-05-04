@@ -15,11 +15,16 @@ module.exports = (env, callback) ->
   options = env.config.paginator or {}
   for key, value of defaults
     options[key] ?= defaults[key]
+    
+  getContent = (contents, path) ->
+    if env.helpers.getLanguage() == 'fr'
+      return contents[path]
+    return contents['en'][path]
 
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
     # note that each article is assumed to have its own directory in the articles directory
-    articles = contents[options.articles]._.directories.map (item) -> item.index
+    articles = getContent(contents, options.articles)._.directories.map (item) -> item.index
     # skip articles that does not have a template associated
     articles = articles.filter (item) -> item.template isnt 'none'
     # sort article by date
@@ -28,40 +33,40 @@ module.exports = (env, callback) ->
 
   getHeaders = (contents) ->
     pages = []
-    for key, value of contents[options.headers]
+    for key, value of getContent(contents, options.headers)
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getProjects = (contents) ->
     pages = []
-    for key, value of contents['projects']
+    for key, value of getContent(contents, 'projects')
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getExperiences = (contents) ->
     pages = []
-    for key, value of contents['experiences']
+    for key, value of getContent(contents, 'experiences')
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getFormations = (contents) ->
     pages = []
-    for key, value of contents['formations']
+    for key, value of getContent(contents, 'formations')
       pages.push value
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
     
   getFooter = (contents) ->
-    return contents['footer.md']
+    return getContent(contents, 'footer.md')
     
   getSkills = (contents) ->
-    return contents['skills.json']  
+    return getContent(contents, 'skills.json')
     
   getKeywords = (contents) ->
-    return contents['keywords.json']  
+    return getContent(contents, 'keywords.json')
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
