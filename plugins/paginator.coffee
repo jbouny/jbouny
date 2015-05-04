@@ -61,6 +61,9 @@ module.exports = (env, callback) ->
     
   getKeywords = (contents) ->
     return env.helpers.contentsI18n(contents)['keywords.json']
+    
+  getCarousels = (contents) ->
+    return env.helpers.contentsI18n(contents)['carousel-index']
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
@@ -130,6 +133,7 @@ module.exports = (env, callback) ->
   env.helpers.getFooter = getFooter
   env.helpers.getSkills = getSkills
   env.helpers.getKeywords = getKeywords
+  env.helpers.getCarousels = getCarousels
 
   # tell the plugin manager we are done
   callback()

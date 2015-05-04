@@ -10,6 +10,7 @@ module.exports = (env, callback) ->
     'LAB_BLOG'            : 'Blog',
     'LAB_CONTACT'         : 'Contact',
     'LAB_EXPERIENCES_PRO' : 'Expériences professionelles',
+    'LAB_TOGGLE'          : 'Afficher/cacher le menu',
     
     'DESC_POSTE'          : 'Ingénieur R&D à Catopsys',
     'EXP_GITHUB'          : 'L’ensemble de ces démos sont a retrouver directement sur '
@@ -20,13 +21,14 @@ module.exports = (env, callback) ->
     'LAB_MORE'            : 'More',
     'LAB_HOME'            : 'Home',
     'LAB_EXPERIENCES'     : 'Experiences',
-    'LAB_COMPETENCES'     : 'Competences',
-    'LAB_FORMATIONS'      : 'Formations',
+    'LAB_COMPETENCES'     : 'Skills',
+    'LAB_FORMATIONS'      : 'Education',
     'LAB_BLOG'            : 'Blog',
     'LAB_CONTACT'         : 'Contact',
     'LAB_EXPERIENCES_PRO' : 'Professionnal experiences',
+    'LAB_TOGGLE'          : 'Toggle navigation',
     
-    'DESC_POSTE'          : 'R&D engineer at Catopsys',
+    'DESC_POSTE'          : 'R&D Engineer at Catopsys',
     'EXP_GITHUB'          : 'All this demos can be found on '
   ]
 

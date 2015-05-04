@@ -30,7 +30,7 @@ html(lang=language)
       div.container
         div.navbar-header
           button.navbar-toggle(data-toggle="collapse", data-target="#navbar-main")
-            span.sr-only Toggle navigation
+            span.sr-only= env.helpers.s('LAB_TOGGLE')
             span.icon-bar
             span.icon-bar
             span.icon-bar

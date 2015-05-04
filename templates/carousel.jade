@@ -1,6 +1,6 @@
 header#carousel(class="carousel slide")
   
-  - var carousels = contents['carousel-index']
+  - var carousels = env.helpers.getCarousels(contents)
   - var i = 0
 
   ol.carousel-indicators

@@ -19,6 +19,7 @@ block content
               header.panel-heading
                 h4.text-center= experience.title
                 h5.text-center= experience.metadata.date
+                h5.text-center.text-primary= experience.metadata.location
                 img.img-responsive(src=experience.metadata.image)
               div.panel-body
                 | !{ typogr(experience.html).typogrify() }
@@ -38,7 +39,7 @@ block content
           
         p.col-lg-12= env.helpers.s('EXP_GITHUB')
           a(href="https://github.com/jbouny") GitHub 
-            img(src=env.helpers.makeRelative(page.url, "images/icons/github.png"), alt="Github")
+            img(src=contents.images.icons['github.png'].url, alt="Github")
         
         mixin display_project(project)
           article.col-lg-3.col-md-3.col-sm-6
