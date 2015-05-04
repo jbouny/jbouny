@@ -3,7 +3,11 @@ block vars
   - var bodyclass = null;
 
 - env.helpers.checkLanguage(page)
-html(lang=env.helpers.getLanguage())
+- var language = env.helpers.getLanguage()
+- page.rawFilename = page.filename
+- if( language == 'en' )
+  - page.rawFilename = page.filename.substr( page.filename.indexOf('en/') + 3 )
+html(lang=language)
   head
     block head
       meta(charset='utf-8')
@@ -16,9 +20,9 @@ html(lang=env.helpers.getLanguage())
           = locals.name
       link(rel='alternate', href=env.helpers.makeRelative(page.url, '/feed.xml'), type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
-      link(rel='stylesheet', href=env.helpers.makeRelative(page.url, '/css/bootstrap-yeti.min.css'))
-      link(rel='stylesheet', href=env.helpers.makeRelative(page.url, '/css/modern-business.css'))
-      link(rel='stylesheet', href=env.helpers.makeRelative(page.url, '/css/style.css'))
+      link(rel='stylesheet', href=contents.css['bootstrap-yeti.min.css'].url)
+      link(rel='stylesheet', href=contents.css['modern-business.css'].url)
+      link(rel='stylesheet', href=contents.css['style.css'].url)
       
   body.bodyclass
   
@@ -30,22 +34,34 @@ html(lang=env.helpers.getLanguage())
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href=env.helpers.makeRelative(page.url, "/index.html"))= locals.name
+          a.navbar-brand(href=env.helpers.contentsI18n(contents).index.url)= locals.name
           
         nav.collapse.navbar-collapse#navbar-main
           ul.nav.navbar-nav.navbar-right
             li
-              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/index.html"))= env.helpers.s('LAB_HOME')
+              a(href=env.helpers.contentsI18n(contents).index.url)= env.helpers.s('LAB_HOME')
             li
-              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/experiences.html"))= env.helpers.s('LAB_EXPERIENCES')
+              a(href=env.helpers.contentsI18n(contents)['experiences.md'].url)= env.helpers.s('LAB_EXPERIENCES')
             li
-              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/competences.html"))= env.helpers.s('LAB_COMPETENCES')
+              a(href=env.helpers.contentsI18n(contents)['competences.md'].url)= env.helpers.s('LAB_COMPETENCES')
             li
-              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/formations.html"))= env.helpers.s('LAB_FORMATIONS')
+              a(href=env.helpers.contentsI18n(contents)['formations.md'].url)= env.helpers.s('LAB_FORMATIONS')
             //-li
-            //-  a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/blog.html"))= env.helpers.s('LAB_BLOG')
+            //-  a(href=env.helpers.contentsI18n(contents).blog.url)= env.helpers.s('LAB_BLOG')
             li
-              a(href=env.helpers.makeRelative(page.url, env.helpers.getRoot() + "/contact.html"))= env.helpers.s('LAB_CONTACT')
+              a(href=env.helpers.contentsI18n(contents)['contact.md'].url)= env.helpers.s('LAB_CONTACT')
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown")= language.toUpperCase() + ' '
+                b.caret
+              ul.dropdown-menu
+                li
+                  - var file = page.filename
+                  - if( language == 'fr' )
+                      a(href=env.helpers.makeRelative(page.url, 'en/' + page.rawFilename)) EN
+                      a(href=page.url) FR
+                    - else
+                      a(href=page.url) EN
+                      a(href=env.helpers.makeRelative(page.url, '../' + page.rawFilename)) FR
                   
     block header
       

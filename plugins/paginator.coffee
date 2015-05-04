@@ -5,8 +5,6 @@ module.exports = (env, callback) ->
 
   defaults =
     template: 'index.jade' # template that renders pages
-    articles: 'articles' # directory containing contents to paginate
-    headers: 'headers-index'
     first: 'index.html' # filename/url for first page
     filename: 'page/%d/index.html' # filename for rest of pages
     perPage: 2 # number of articles per page
@@ -15,16 +13,12 @@ module.exports = (env, callback) ->
   options = env.config.paginator or {}
   for key, value of defaults
     options[key] ?= defaults[key]
-    
-  getContent = (contents, path) ->
-    if env.helpers.getLanguage() == 'fr'
-      return contents[path]
-    return contents['en'][path]
 
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
     # note that each article is assumed to have its own directory in the articles directory
-    articles = getContent(contents, options.articles)._.directories.map (item) -> item.index
+    folder = env.helpers.contentsI18n(contents)['articles']
+    articles = folder._.directories.map (item) -> item.index
     # skip articles that does not have a template associated
     articles = articles.filter (item) -> item.template isnt 'none'
     # sort article by date
@@ -33,40 +27,40 @@ module.exports = (env, callback) ->
 
   getHeaders = (contents) ->
     pages = []
-    for key, value of getContent(contents, options.headers)
+    for key, value of env.helpers.contentsI18n(contents)['headers-index']
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getProjects = (contents) ->
     pages = []
-    for key, value of getContent(contents, 'projects')
+    for key, value of env.helpers.contentsI18n(contents)['projects']
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getExperiences = (contents) ->
     pages = []
-    for key, value of getContent(contents, 'experiences')
+    for key, value of env.helpers.contentsI18n(contents)['experiences']
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getFormations = (contents) ->
     pages = []
-    for key, value of getContent(contents, 'formations')
+    for key, value of env.helpers.contentsI18n(contents)['formations']
       pages.push value
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
     
   getFooter = (contents) ->
-    return getContent(contents, 'footer.md')
+    return env.helpers.contentsI18n(contents)['footer.md']
     
   getSkills = (contents) ->
-    return getContent(contents, 'skills.json')
+    return env.helpers.contentsI18n(contents)['skills.json']
     
   getKeywords = (contents) ->
-    return getContent(contents, 'keywords.json')
+    return env.helpers.contentsI18n(contents)['keywords.json']
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
