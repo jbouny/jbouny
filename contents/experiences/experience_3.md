@@ -5,8 +5,8 @@ title: Ingénieur R&D alternant
 location: Catopsys
 image: images/catopsys_h.jpg
 ---
-Travail de R&D dans le domaine de l'imagerie numérique et de la réalité virtuelle.
+Travail de Recherche et Développement dans le domaine de l'imagerie numérique et de la réalité virtuelle.
 
-Conception d’une caméra intelligente pour un système de suivi optique. Travail de R&D traitant d’analyse d’image, d’optimisation, de réseau, d’électronique, d’optique.
+Conception d’une caméra intelligente pour un système de suivi optique. Travail de R&D traitant d’analyse d’image, d’optimisation, de réseau, d’électronique et d’optique.
 
 Travail en agilité et en équipe, touchant de nombreuses compétences. 

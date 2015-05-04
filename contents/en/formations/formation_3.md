@@ -1,6 +1,6 @@
 ---
 template: md-page.jade
 date: 2009 - 2006
-title: Baccalauréat Scientifique option mathématiques. 
+title: Equivalent to A level specialized in Sciences.
 location: Lycée Sainte-Thècle, Chamalières, France.
 ---

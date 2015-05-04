@@ -2,7 +2,7 @@
 template: md-page.jade
 date: 2014 - 2011
 title: Diplôme d’ingénieur en Informatique et en Modélisation.
-location: ISIMA
+location: ISIMA (Institut Supérieur d’Informatique, de Modélisation et de leurs Applications), Clermont-Ferrand, France.
 ---
 Option Génie Logiciel et Systèmes Informatiques.
 

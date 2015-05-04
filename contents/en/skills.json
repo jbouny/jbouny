@@ -1,68 +1,68 @@
 {
-  "2D/3D temps réel": {
+  "Real time 2D/3D": {
     "score": 90,
     "colors": ["#39BE61", "#58D27D"],
     "content": [
-        "<span>API Graphiques :</span> OpenGL, OpenGL ES, WebGL",
-        "<span>Shaders :</span> GLSL, HLSL",
-        "<span>Moteurs 2D & 3D :</span> Three.js, Unity 3D, Ogre 3D, Pixi.js",
-        "<span>Moteur physique :</span> Box2d",
-        "<span>Domaines :</span> Jeux vidéos, réalité virtuelle, réalité augmentée"
+        "<span>Graphical API:</span> OpenGL, OpenGL ES, WebGL",
+        "<span>Shading languages:</span> GLSL, HLSL",
+        "<span>2D&3D engines:</span> Three.js, Unity 3D, Ogre 3D, Pixi.js",
+        "<span>Physic engine:</span> Box2d",
+        "<span>Fields:</span> Video games, virtual reality, augmented reality"
     ]
   },
-  "Vision par ordinateur": {
+  "Computer vision": {
     "score": 80,
     "colors": ["#D94184", "#E5609A"],
     "content": [
-      "<span>Traitement d'image :</span> OpenCV, CImg",
-      "<span>Bibliothèque traitement 3D :</span> Ceres-solver, OpenMVG",
-      "<span>Récupération de flux 2D & 3D :</span> OpenNI, MMAL, VLC",
-      "<span>Domaines :</span> Reconstruction 3D (SfM), analyse d'image, suivi de personnes, déformation d'image"
+      "<span>Image processing:</span> OpenCV, CImg",
+      "<span>3D processing library:</span> Ceres-solver, OpenMVG",
+      "<span>2D&3D streams retrieving :</span> OpenNI, MMAL, VLC",
+      "<span>Fields:</span> 3D reconstruction (SfM), image analysis, optical tracking, image distortion"
     ]
   },
-  "Développement logiciel": {
+  "Software development": {
     "score": 100,
     "colors": ["#3D6BAA", "#5C88C4"],
     "content": [
-      "<span>Langages principaux :</span> C++, C, C#, Python, Java, JavaScript",
-      "<span>Interfaces graphiques :</span> Qt, WPF, Swing, Tkinter",
-      "Manipulation et administration de bases de données",
-      "Notions de développement mobile iOS et Android",
-      "<span>Domaines :</span> Réalité virtuelle, logiciels bureautique, développement mobile"
+      "<span>Main languages:</span> C++, C, C#, Python, Java, JavaScript",
+      "<span>GUI:</span> Qt, WPF, Swing, Tkinter",
+      "Processing and administration of databases",
+      "Mobile development basics on iOS and Android",
+      "<span>Fields:</span> Virtual reality, desktop softwares, mobile development"
     ]
   },
-  "Informatique embarquée": {
+  "Embedded software": {
     "score": 80,
     "colors": ["#FFBC4C", "#FFC76B"],
     "content": [
-      "<span>Raspberry PI :</span> Manipulation GPIO, API MMAL",
-      "Réalisation de schémas électroniques basiques",
-      "Traitement de flux vidéo haute résolution temps réel",
-      "<span>Prototypage :</span> Impression 3D, circuits électroniques",
-      "<span>Domaines :</span> Caméras intélligentes, suivi optique, robotique"
+      "<span>Raspberry PI:</span> GPIO handling, MMAL API",
+      "Basic electronic design",
+      "Processing of high resolution video stream in real time",
+      "<span>Prototyping:</span> 3D printing, electronic circuits",
+      "<span>Fields:</span> Smart cameras, optical tracking, robotics"
     ]
   },
-  "Développement web": {
+  "Web development": {
     "score": 100,
     "colors": ["#FF8D4C", "#FFA06B"],
     "content": [
-      "<span>HTML5 :</span> Canvas 2D, WebGL, WebSockets, Web Workers",
-      "<span>CMS :</span> WordPress, Drupal",
-      "<span>Techno côté serveur :</span> PHP, Node.js, JEE, IIS",
-      "<span>Autre :</span> Génération statique",
-      "<span>Domaines :</span> Application web, application interactives, contrôle à distance"
+      "<span>HTML5:</span> Canvas 2D, WebGL, WebSockets, Web Workers",
+      "<span>CMS:</span> WordPress, Drupal",
+      "<span>Server side technologies:</span> PHP, Node.js, JEE, IIS",
+      "<span>Other:</span> Génération statique",
+      "<span>Fields:</span> Web application, interactive application, remote control"
     ]
   },
-  "Systèmes informatiques": {
+  "Computer systems": {
     "score": 70,
     "colors": ["#2F9E9A", "#4EBBB7"],
     "content": [
-      "<span>Réseau :</span> Protocoles UDP, TCP, OSC, VRPN",
-      "<span>Serveur :</span> Mise en place et maintenance",
-      "<span>Serveur gestion de versions :</span> SVN, Git, GitLab",
-      "<span>Intégration continue :</span> Jenkins",
-      "Cryptographie et sécurité",
-      "<span>Domaines :</span> Objets connectés, serveurs web, outils de développement"
+      "<span>Protocoles:</span> UDP, TCP, OSC and VRPN",
+      "<span>Server:</span> Setting up and maintenance",
+      "<span>Version control server:</span> SVN, Git, GitLab",
+      "<span>Continuous integration:</span> Jenkins",
+      "Cryptography and security",
+      "<span>Fields:</span> Connected objects, web servers, development tools"
     ]
   }
 }

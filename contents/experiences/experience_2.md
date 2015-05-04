@@ -1,8 +1,8 @@
 ---
 template: md-page.jade
 date: 04/2012 – 09/2014
-title: Auto-entrepreneur
-location: Catopsys
+title: Développeur indépendant
+location: France
 image: images/developer.jpg
 ---
 Conception et réalisation de sites web.

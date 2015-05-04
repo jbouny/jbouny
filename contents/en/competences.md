@@ -1,4 +1,4 @@
 ---
 template: competences.jade
-title: Competences
+title: Skills
 ---

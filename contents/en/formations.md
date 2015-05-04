@@ -1,4 +1,4 @@
 ---
 template: formations.jade
-title: Formations
+title: Education
 ---
