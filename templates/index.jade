@@ -56,7 +56,7 @@ block content
         - var projects = env.helpers.getProjects(contents)
         each project in projects.slice(0, 4)
           +display_project(project)
-      div.row
+      div.col-lg-12.row
         a.btn.btn-default.btn-block(href=env.helpers.makeRelative(page.url, "/experiences.html#projets"))= env.helpers.s('LAB_MORE')
 
 block script

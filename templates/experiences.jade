@@ -26,34 +26,33 @@ block content
         - var experiences = env.helpers.getExperiences(contents)
         - var i = 0, length = experiences.length
         while i < length
-          div.row
+          div.row.col-lg-12
             - var j = 0
             while j++ < 3 && i < length
               +display_experience(experiences[i])
               - i++
                 
       section.row
-        div.col-lg-12
-          header
-            h2.page-header#projets= env.helpers.s('LAB_DEMOS')
-            
-          p= env.helpers.s('EXP_GITHUB')
-            a(href="https://github.com/jbouny") GitHub 
-              img(src=env.helpers.makeRelative(page.url, "images/icons/github.png"), alt="Github")
+        header.col-lg-12
+          h2.page-header#projets= env.helpers.s('LAB_DEMOS')
           
-          mixin display_project(project)
-            article.col-lg-3.col-md-3.col-sm-6
-              div.media
-                div.pull-left
-                  a(href=project.metadata.url, target="_blank")
-                    img(src=project.metadata.image)
-                div.media-body
-                  header
-                    h4.media-heading
-                      a(href=project.metadata.url, target="_blank")= project.title
-                  p
-                    | !{ typogr(project.html).typogrify() }
-          
-          - var projects = env.helpers.getProjects(contents)
-          each project in projects
-            +display_project(project)
+        p.col-lg-12= env.helpers.s('EXP_GITHUB')
+          a(href="https://github.com/jbouny") GitHub 
+            img(src=env.helpers.makeRelative(page.url, "images/icons/github.png"), alt="Github")
+        
+        mixin display_project(project)
+          article.col-lg-3.col-md-3.col-sm-6
+            div.media
+              div.pull-left
+                a(href=project.metadata.url, target="_blank")
+                  img(src=project.metadata.image)
+              div.media-body
+                header
+                  h4.media-heading
+                    a(href=project.metadata.url, target="_blank")= project.title
+                p
+                  | !{ typogr(project.html).typogrify() }
+        
+        - var projects = env.helpers.getProjects(contents)
+        each project in projects
+          +display_project(project)
