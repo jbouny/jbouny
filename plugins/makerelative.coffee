@@ -5,7 +5,7 @@ module.exports = (env, callback) ->
     num++ while pos = 1 + string.indexOf(substr, pos)
     num
 
-  env.helpers.makeRelative = (source, dest) ->
+  env.relative = (source, dest) ->
     return dest unless dest.indexOf("/") == 0
     depth = count(source, '/') # 1 being /
     ret = ""

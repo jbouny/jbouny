@@ -39,7 +39,7 @@ block content
           
         p.col-lg-12= env.helpers.s('EXP_GITHUB')
           a(href="https://github.com/jbouny") GitHub 
-            img(src=contents.images.icons['github.png'].url, alt="Github")
+            img(src=env.relative(page.url, contents.images.icons['github.png'].url), alt="Github")
         
         mixin display_project(project)
           article.col-lg-3.col-md-3.col-sm-6

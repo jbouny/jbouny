@@ -55,7 +55,7 @@ module.exports = (env, callback) ->
   getLanguage = () ->
     return language
     
-  contentsI18n = (contents) ->
+  i18nContents = (contents) ->
     if language == 'fr'
       return contents
     else
@@ -66,7 +66,7 @@ module.exports = (env, callback) ->
   env.helpers.checkLanguage = checkLanguage
   env.helpers.getRoot = getRoot
   env.helpers.getLanguage = getLanguage
-  env.helpers.contentsI18n = contentsI18n
+  env.i18nContents = i18nContents
 
   # tell the plugin manager we are done
   callback()

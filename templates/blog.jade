@@ -15,12 +15,12 @@ block content
             p.date
               span= moment.utc(article.date).format('DD. MMMM YYYY')
             h2
-              a(href=env.helpers.makeRelative(page.url, article.url))= article.title
+              a(href=env.relative(page.url, article.url))= article.title
             if article.intro.length > 0
               | !{ typogr(article.intro).typogrify() }
             if article.hasMore
               p.more
-                a(href=env.helpers.makeRelative(page.url, article.url)) more
+                a(href=env.relative(page.url, article.url)) more
         hr
 
 

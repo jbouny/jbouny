@@ -18,11 +18,11 @@ html(lang=language)
       title
         block title
           = locals.name
-      link(rel='alternate', href=env.helpers.makeRelative(page.url, '/feed.xml'), type='application/rss+xml', title=locals.description)
+      link(rel='alternate', href=env.relative(page.url, '/feed.xml'), type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
-      link(rel='stylesheet', href=contents.css['bootstrap-yeti.min.css'].url)
-      link(rel='stylesheet', href=contents.css['modern-business.css'].url)
-      link(rel='stylesheet', href=contents.css['style.css'].url)
+      link(rel='stylesheet', href=env.relative(page.url, contents.css['bootstrap-yeti.min.css'].url))
+      link(rel='stylesheet', href=env.relative(page.url, contents.css['modern-business.css'].url))
+      link(rel='stylesheet', href=env.relative(page.url, contents.css['style.css'].url))
       
   body.bodyclass
   
@@ -34,22 +34,21 @@ html(lang=language)
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href=env.helpers.contentsI18n(contents).index.url)= locals.name
-          
+          a.navbar-brand(href=env.i18nContents(contents).index.url)= locals.name
         nav.collapse.navbar-collapse#navbar-main
           ul.nav.navbar-nav.navbar-right
             li
-              a(href=env.helpers.contentsI18n(contents).index.url)= env.helpers.s('LAB_HOME')
+              a(href=env.relative(page.url, env.i18nContents(contents).index.url))= env.helpers.s('LAB_HOME')
             li
-              a(href=env.helpers.contentsI18n(contents)['experiences.md'].url)= env.helpers.s('LAB_EXPERIENCES')
+              a(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url))= env.helpers.s('LAB_EXPERIENCES')
             li
-              a(href=env.helpers.contentsI18n(contents)['competences.md'].url)= env.helpers.s('LAB_COMPETENCES')
+              a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')
             li
-              a(href=env.helpers.contentsI18n(contents)['formations.md'].url)= env.helpers.s('LAB_FORMATIONS')
+              a(href=env.relative(page.url, env.i18nContents(contents)['formations.md'].url))= env.helpers.s('LAB_FORMATIONS')
             //-li
-            //-  a(href=env.helpers.contentsI18n(contents).blog.url)= env.helpers.s('LAB_BLOG')
+            //-  a(href=env.relative(page.url, env.i18nContents(contents).blog.url))= env.helpers.s('LAB_BLOG')
             li
-              a(href=env.helpers.contentsI18n(contents)['contact.md'].url)= env.helpers.s('LAB_CONTACT')
+              a(href=env.relative(page.url, env.i18nContents(contents)['contact.md'].url))= env.helpers.s('LAB_CONTACT')
             li.dropdown
               a.dropdown-toggle(href="#", data-toggle="dropdown")= language.toUpperCase() + ' '
                 b.caret
@@ -57,11 +56,11 @@ html(lang=language)
                 li
                   - var file = page.filename
                   - if( language == 'fr' )
-                      a(href=env.helpers.makeRelative(page.url, 'en/' + page.rawFilename)) EN
+                      a(href=env.relative(page.url, 'en/' + page.rawFilename)) EN
                       a(href=page.url) FR
                     - else
                       a(href=page.url) EN
-                      a(href=env.helpers.makeRelative(page.url, '../' + page.rawFilename)) FR
+                      a(href=env.relative(page.url, '../' + page.rawFilename)) FR
                   
     block header
       
@@ -75,8 +74,8 @@ html(lang=language)
               hr
               !=env.helpers.getFooter(contents).html
               
-    script(src=env.helpers.makeRelative(page.url, '/js/jquery.min.js'))
-    script(src=env.helpers.makeRelative(page.url, '/js/bootstrap.min.js'))
+    script(src=env.relative(page.url, contents.js['jquery.min.js'].url))
+    script(src=env.relative(page.url, contents.js['bootstrap.min.js'].url))
     
     script.
       var _paq = _paq || [];

@@ -17,7 +17,7 @@ module.exports = (env, callback) ->
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
     # note that each article is assumed to have its own directory in the articles directory
-    folder = env.helpers.contentsI18n(contents)['articles']
+    folder = env.i18nContents(contents)['articles']
     articles = folder._.directories.map (item) -> item.index
     # skip articles that does not have a template associated
     articles = articles.filter (item) -> item.template isnt 'none'
@@ -27,43 +27,43 @@ module.exports = (env, callback) ->
 
   getHeaders = (contents) ->
     pages = []
-    for key, value of env.helpers.contentsI18n(contents)['headers-index']
+    for key, value of env.i18nContents(contents)['headers-index']
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getProjects = (contents) ->
     pages = []
-    for key, value of env.helpers.contentsI18n(contents)['projects']
+    for key, value of env.i18nContents(contents)['projects']
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getExperiences = (contents) ->
     pages = []
-    for key, value of env.helpers.contentsI18n(contents)['experiences']
+    for key, value of env.i18nContents(contents)['experiences']
       pages.push value if value instanceof env.plugins.Page
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
 
   getFormations = (contents) ->
     pages = []
-    for key, value of env.helpers.contentsI18n(contents)['formations']
+    for key, value of env.i18nContents(contents)['formations']
       pages.push value
     pages = pages.sort (a, b) -> b.filename - a.filename
     return pages
     
   getFooter = (contents) ->
-    return env.helpers.contentsI18n(contents)['footer.md']
+    return env.i18nContents(contents)['footer.md']
     
   getSkills = (contents) ->
-    return env.helpers.contentsI18n(contents)['skills.json']
+    return env.i18nContents(contents)['skills.json']
     
   getKeywords = (contents) ->
-    return env.helpers.contentsI18n(contents)['keywords.json']
+    return env.i18nContents(contents)['keywords.json']
     
   getCarousels = (contents) ->
-    return env.helpers.contentsI18n(contents)['carousel-index']
+    return env.i18nContents(contents)['carousel-index']
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
