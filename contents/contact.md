@@ -3,7 +3,10 @@ template: contact.jade
 title: Contact
 ---
 
-Jérémy BOUNY
+#### Jérémy BOUNY
+
+![Localisation](/makerelative/images/icons/location.png)
+Clermont-Ferrand, France
 
 [![Mail](/makerelative/images/icons/mail.png)][mail]
 [jbouny@gmail.com][mail]
