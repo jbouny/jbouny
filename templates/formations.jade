@@ -22,8 +22,7 @@ block content
                   h4.media-heading= formation.title
                   p.text-primary= formation.metadata.location
                 - if (formation.html.length > 0)
-                  p
-                    | !{ typogr(formation.html).typogrify() }
+                  | !{ typogr(formation.html).typogrify() }
 block script
   script.
     jQuery( document ).ready( function AnimateSkillbars() {

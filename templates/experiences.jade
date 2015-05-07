@@ -20,10 +20,10 @@ block content
                 h4.text-center= experience.title
                 h5.text-center= experience.metadata.date
                 h5.text-center.text-primary= experience.metadata.location
-                img.img-responsive(src=experience.metadata.image)
+                img.img-responsive(src=experience.metadata.image, alt=experience.title)
               div.panel-body
                 | !{ typogr(experience.html).typogrify() }
-          
+        
         - var experiences = env.helpers.getExperiences(contents)
         - var i = 0, length = experiences.length
         while i < length
@@ -39,20 +39,19 @@ block content
           
         p.col-lg-12= env.helpers.s('EXP_GITHUB')
           a(href="https://github.com/jbouny") GitHub 
-            img(src=env.relative(page.url, contents.images.icons['github.png'].url), alt="Github")
+            img(src=env.relative(page.url, contents.images.icons['github.png'].url), alt="GitHub")
         
         mixin display_project(project)
           article.col-lg-3.col-md-3.col-sm-6
             div.media
               div.pull-left
                 a(href=project.metadata.url, target="_blank")
-                  img(src=project.metadata.image)
+                  img(src=project.metadata.image, alt=project.title)
               div.media-body
                 header
                   h4.media-heading
                     a(href=project.metadata.url, target="_blank")= project.title
-                p
-                  | !{ typogr(project.html).typogrify() }
+                | !{ typogr(project.html).typogrify() }
         
         - var projects = env.helpers.getProjects(contents)
         each project in projects

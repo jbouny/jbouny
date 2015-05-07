@@ -12,7 +12,7 @@ block content
       
       - var skills = env.helpers.getSkills(contents)
       
-      section.row
+      div.row
         div.col-lg-12          
           //- http://codepen.io/tamak/pen/hzEer
           each data, skill in skills.metadata
@@ -25,7 +25,7 @@ block content
       
       hr
 
-      section.row
+      div.row
         div.col-lg-12   
           
           - var projects = env.helpers.getProjects(contents)
@@ -34,11 +34,12 @@ block content
             each data, category in skills.metadata
               article.col-md-4.col-sm-12.competence
                 div.panel.panel-default
-                  header.panel-heading(style="background-color:" + data.colors[0] + ";")= category
+                  header.panel-heading(style="background-color:" + data.colors[0] + ";")
+                    h4= category
                   div.panel-body
                     ul
-                    each line in data.content
-                      li !{line}
+                      each line in data.content
+                        li !{line}
 
 block script
   script.

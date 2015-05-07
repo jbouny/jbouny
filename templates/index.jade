@@ -24,9 +24,8 @@ block content
             header.panel-heading
               h4= header.title
             div.panel-body
-              p
-                | !{ typogr(header.html).typogrify() }
-      
+              | !{ typogr(header.html).typogrify() }
+        
   div.row
     section.col-md-4.keywords
       header
@@ -45,7 +44,7 @@ block content
           div.media
             div.pull-left
               a(href=project.metadata.url, target="_blank")
-                img(src=project.metadata.image)
+                img(src=project.metadata.image, alt=project.title)
             div.media-body
               h4.media-heading
                 a(href=project.metadata.url, target="_blank")= project.title
