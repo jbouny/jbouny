@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 title: RunRun
 image: images/projets/thumbnails/runrun.jpg
 url: http://jeremybouny.fr/runrun

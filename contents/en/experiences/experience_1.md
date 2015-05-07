@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: Since 09/2014
 title: R&D Engineer
 location: Catopsys, France

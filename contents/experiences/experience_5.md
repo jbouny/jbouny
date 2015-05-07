@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 04/2011 - 06/2011
 title: Développeur stagiaire
 location: Alfa Informatique

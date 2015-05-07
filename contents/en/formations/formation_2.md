@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 2011 - 2009
 title: Equivalent to Two-year university degree in Computer sciences.
 location: IUT (Institut Universitaire de Technologie) of Clermont-Ferrand, France.

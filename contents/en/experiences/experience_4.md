@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 04/2013 – 08/2013
 title: Intern R&D Engineer
 location: Catopsys, France

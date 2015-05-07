@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 title: Générateur de terrain
 image: images/projets/thumbnails/terrain-gen.jpg
 url: http://jeremybouny.fr/terrain-generator/demo/

@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 2011 - 2009
 title: Diplôme Universitaire de Technologie (DUT) en informatique.
 location: IUT (Institut Universitaire de Technologie) de Clermont-Ferrand, France.

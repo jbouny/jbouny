@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 2014 - 2011
 title: Equivalent to Master’s Degree in Engineering and Computer sciences.
 location: ISIMA (Institut Supérieur d’Informatique, de Modélisation et de leurs Applications), Clermont-Ferrand, France.

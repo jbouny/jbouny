@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: Depuis 09/2014
 title: Ingénieur Recherche
 location: Catopsys

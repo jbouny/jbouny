@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 title: A trip under the moonlight
 image: images/projets/thumbnails/ocean_fft.jpg
 url: http://jbouny.github.io/fft-ocean/

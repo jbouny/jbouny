@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 09/2013 – 09/ 2014
 title: R&D Engineer in Cooperative education
 location: Catopsys, France

@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 title: Tob the Bot
 image: images/projets/thumbnails/tob.jpg
 url: http://github.com/jbouny/tobthebot

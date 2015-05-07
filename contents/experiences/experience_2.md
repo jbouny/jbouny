@@ -1,5 +1,4 @@
 ---
-template: md-page.jade
 date: 04/2012 – 09/2014
 title: Développeur indépendant
 location: France
