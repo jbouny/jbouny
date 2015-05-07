@@ -13,6 +13,9 @@ module.exports = (env, callback) ->
   options = env.config.paginator or {}
   for key, value of defaults
     options[key] ?= defaults[key]
+    
+  orderByFileName = (array) ->
+    return array.sort (a, b) -> b.filename < a.filename
 
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
@@ -22,36 +25,31 @@ module.exports = (env, callback) ->
     # skip articles that does not have a template associated
     articles = articles.filter (item) -> item.template isnt 'none'
     # sort article by date
-    articles = articles.sort (a, b) -> b.filename - a.filename
-    return articles
+    articles = articles.sort (a, b) -> b.date - a.date
 
   getHeaders = (contents) ->
     pages = []
     for key, value of env.i18nContents(contents)['headers-index']
       pages.push value if value instanceof env.plugins.Page
-    pages = pages.sort (a, b) -> b.filename - a.filename
-    return pages
+    return orderByFileName(pages)
 
   getProjects = (contents) ->
     pages = []
     for key, value of env.i18nContents(contents)['projects']
       pages.push value if value instanceof env.plugins.Page
-    pages = pages.sort (a, b) -> b.filename - a.filename
-    return pages
+    return orderByFileName(pages)
 
   getExperiences = (contents) ->
     pages = []
     for key, value of env.i18nContents(contents)['experiences']
       pages.push value if value instanceof env.plugins.Page
-    pages = pages.sort (a, b) -> b.filename - a.filename
-    return pages
+    return orderByFileName(pages)
 
   getFormations = (contents) ->
     pages = []
     for key, value of env.i18nContents(contents)['formations']
       pages.push value
-    pages = pages.sort (a, b) -> b.filename - a.filename
-    return pages
+    return orderByFileName(pages)
     
   getFooter = (contents) ->
     return env.i18nContents(contents)['footer.md']
@@ -63,7 +61,10 @@ module.exports = (env, callback) ->
     return env.i18nContents(contents)['keywords.json']
     
   getCarousels = (contents) ->
-    return env.i18nContents(contents)['carousel-index']
+    pages = []
+    for key, value of env.i18nContents(contents)['carousel-index']
+      pages.push value if value instanceof env.plugins.Page
+    return orderByFileName(pages)
 
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
