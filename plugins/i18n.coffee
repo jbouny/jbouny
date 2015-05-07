@@ -9,7 +9,7 @@ module.exports = (env, callback) ->
     'LAB_FORMATIONS'      : 'Formations',
     'LAB_BLOG'            : 'Blog',
     'LAB_CONTACT'         : 'Contact',
-    'LAB_EXPERIENCES_PRO' : 'Expériences professionelles',
+    'LAB_EXPERIENCES_PRO' : 'Expériences professionnelles',
     'LAB_TOGGLE'          : 'Afficher/cacher le menu',
     
     'DESC_POSTE'          : 'Ingénieur R&D à Catopsys',
@@ -25,7 +25,7 @@ module.exports = (env, callback) ->
     'LAB_FORMATIONS'      : 'Education',
     'LAB_BLOG'            : 'Blog',
     'LAB_CONTACT'         : 'Contact',
-    'LAB_EXPERIENCES_PRO' : 'Professionnal experiences',
+    'LAB_EXPERIENCES_PRO' : 'Professional experiences',
     'LAB_TOGGLE'          : 'Toggle navigation',
     
     'DESC_POSTE'          : 'R&D Engineer at Catopsys',

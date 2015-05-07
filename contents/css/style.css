@@ -88,12 +88,13 @@
 } 
 
 .formation .media-left .media-object {
-  padding: 20px 27px 17px 30px;
   width: 100px;
   height: 100px;
   border-radius: 100px;
+  padding: 20px 30px;
+  /*padding: 20px 27px 17px 30px;
   border-bottom: 3px solid #369;
-  border-right: 3px solid #369;
+  border-right: 3px solid #369;*/
 }
 
 .keywords h4 {

@@ -34,7 +34,7 @@ html(lang=language)
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href=env.i18nContents(contents).index.url)= locals.name
+          a.navbar-brand(href=env.relative(page.url, env.i18nContents(contents).index.url))= locals.name
         nav.collapse.navbar-collapse#navbar-main
           ul.nav.navbar-nav.navbar-right
             li
@@ -57,9 +57,9 @@ html(lang=language)
                   - var file = page.filename
                   - if( language == 'fr' )
                       a(href=env.relative(page.url, 'en/' + page.rawFilename)) EN
-                      a(href=page.url) FR
+                      a(href=page.rawFilename) FR
                     - else
-                      a(href=page.url) EN
+                      a(href=page.rawFilename) EN
                       a(href=env.relative(page.url, '../' + page.rawFilename)) FR
                   
     block header
