@@ -6,7 +6,8 @@ block vars
 - var language = env.helpers.getLanguage()
 - page.rawFilename = page.filename
 - if( language == 'en' )
-  - page.rawFilename = page.filename.substr( page.filename.indexOf('en/') + 3 )
+  - var file = page.filename.replace(/\\/g, '/')
+  - page.rawFilename = file.substr( file.indexOf('en/') + 3 )
 html(lang=language)
   head
     block head
@@ -57,7 +58,6 @@ html(lang=language)
                 b.caret
               ul.dropdown-menu
                 li
-                  - var file = page.filename
                   - if( language == 'fr' )
                     a(href=env.relative(page.url, 'en/' + page.rawFilename)) EN
                     a(href=page.rawFilename) FR
