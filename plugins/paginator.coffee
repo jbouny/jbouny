@@ -20,7 +20,7 @@ module.exports = (env, callback) ->
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
     # note that each article is assumed to have its own directory in the articles directory
-    folder = env.i18nContents(contents)['articles']
+    folder = contents.en['articles']
     articles = folder._.directories.map (item) -> item.index
     # skip articles that does not have a template associated
     articles = articles.filter (item) -> item.template isnt 'none'

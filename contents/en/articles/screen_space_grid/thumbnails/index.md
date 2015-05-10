@@ -10,7 +10,7 @@ template: article.jade
 
 ## Problem
 
-When rendering a large terrain, surface water or other elements, we have one problem: How to avoid too many vertices?
+When rendering a large terrain, surface water or other elements, we have one problem: How to obtain a great quality when rendering but avoiding too many vertices?
 
 One common way to optimize the number of vertices, is to use a [level of detail (LOD)](http://www.wikiwand.com/en/Level_of_detail) implementation.
 
@@ -24,18 +24,18 @@ One common way to optimize the number of vertices, is to use a [level of detail 
 
 The surface is divided into a grid of patches. The resolution of each patch will be computed depending of the distance to the viewer.
 
-This method has several pros and cons. Even if it allows a relatively constant resolution, it needs a pre processing and can cause a couple of artefacts between patches.
+This method has several pros and cons. Even if it allows a relatively constant resolution, it needs a pre-processing and can cause a couple of artifacts between patches.
 
-You can found a [full explanation here](http://habib.wikidot.com/projected-grid-ocean-shader-full-html-version#toc7).
+You can found a [full explanation here](http://habib.wikidot.com/projected-grid-ocean-shader-full-html-version#toc7), [on wikipedia](http://www.wikiwand.com/en/Level_of_detail), or [test various implementations](http://vterrain.org/LOD/Implementations/).
 
 
 ## Projected grid?
 
 Ideally, we want a uniform resolution in screen space, instead of working in 3d world for rendering object. This can be achieved with a simple way for rendering large elements fairly flat, as terrain (under some conditions) or water.
 
-The concept is rather easy. We put a grid in screen space coordinates, and project each vertices on a plane in the 3d world.
+The concept is rather easy. We put a grid in screen space coordinates, and project each vertices on a plane in the 3d world ([more information here](http://habib.wikidot.com/projected-grid-ocean-shader-full-html-version#toc11))
 
-With this principle, there is no heavy computation and no artefacts.
+With this principle, there is no heavy computation and no artifacts.
 
 
 <p style="text-align:center;">
@@ -55,7 +55,7 @@ With this principle, there is no heavy computation and no artefacts.
 [![Projected grid](thumbnails/grid_zoom3.jpg)](grid_zoom3.jpg)
 [![Projected grid](thumbnails/grid_zoom4.jpg)](grid_zoom4.jpg)
 <br/>
-Several zoom levels
+Several zoom levels with a grid of 64*64
 </p>
 
 
@@ -72,7 +72,7 @@ Rendering the grid with a black material / a water effect
 <p style="text-align:center;">
 [![Projected grid](thumbnails/grid_5.jpg)](grid_5.jpg)
 <br/>
-Close view on water rendering
+Close view on water rendering with a projected grid
 </p>
 
 ## Implementation in GLSL / Three.js
@@ -83,6 +83,7 @@ In order to implement an efficient projected grid, we need only three things:
 - put the grid in front of the camera
 - compute the depth on each vertices
 
+Everything should be fully automated, with minimal CPU computing at each frame.
 
 ### Create the grid
 
@@ -94,7 +95,7 @@ var gridGeometry = new THREE.PlaneBufferGeometry( 1, 1, 256, 256 );
 
 ### Put the grid in front of the camera
 
-In OpenGL ES 2.0, an object need to be visible in order to be draw. If an object is not in the camera frustum, even the vertex shader is not applied. Our mesh need to be always visible by the camera.
+In OpenGL ES 2.0, an object need to be visible in order to be drawn. If an object is not in the camera frustum, even the vertex shader is not applied. Our mesh need to be always visible by the camera.
 
 One way to achieve it is to add the mesh on the camera.
 
@@ -155,7 +156,7 @@ The ray tracing means that we need to get the 3d ray for each pixel in world spa
 - the rotation of the camera in the world
 - the position of the camera in the world
 
-We could set these data with uniform but there is an easier way: extract it from available matrices. The view matrix is composed of the rotation and the translation.
+We could set these data with a uniform, but there is an easier way: extract it from available matrices. The view matrix is composed of the rotation and the translation.
 
 
 <p style="text-align:center;">
@@ -250,11 +251,22 @@ if( distance > infinite )
 [Full source code](https://github.com/jbouny/projected-grid/blob/master/js/shaders/ScreenSpaceShader.js)
 
 
-### Usage example
+### Tweaking
 
-[Example](https://github.com/jbouny/projected-grid/blob/master/js/shaders/ScreenSpaceShader.js)
+A simulated ray can never cross the plane. We need to check if the intersection exists and if it is in front of the camera instead of behind. 
+
+## Usage example
+
+In order to use it, I give you some resources :
+
+- [Live demo](http://jeremybouny.fr/experiments/screen_space_grid/)
+- [Source code of the live demo](https://github.com/jbouny/projected-grid)
+- [Shader chunk for three.js](https://github.com/jbouny/projected-grid/blob/master/js/shaders/ScreenSpaceShader.js)
+- [Usage of the shader shunk](https://github.com/jbouny/projected-grid/blob/master/js/shaders/OceanShader.js)
+- [A trip under the moonlight: a real use case experiment](https://jbouny.github.io/fft-ocean/)
 
 
+Vertex shader example:
 ``` 
 vertexShader: [
   'precision highp float;',

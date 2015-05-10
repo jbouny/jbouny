@@ -49,21 +49,22 @@ html(lang=language)
               a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')
             li
               a(href=env.relative(page.url, env.i18nContents(contents)['formations.md'].url))= env.helpers.s('LAB_FORMATIONS')
-            //-li
-            //-  a(href=env.relative(page.url, env.i18nContents(contents).blog.url))= env.helpers.s('LAB_BLOG')
+            li
+              a(href=env.relative(page.url, env.i18nContents(contents)['blog.md'].url))= env.helpers.s('LAB_BLOG')
             li
               a(href=env.relative(page.url, env.i18nContents(contents)['contact.md'].url))= env.helpers.s('LAB_CONTACT')
-            li.dropdown
-              a.dropdown-toggle(href="#", data-toggle="dropdown")= language.toUpperCase() + ' '
-                b.caret
-              ul.dropdown-menu
-                li
-                  - if( language == 'fr' )
-                    a(href=env.relative(page.url, 'en/' + page.rawFilename)) EN
-                    a(href=page.rawFilename) FR
-                  - else
-                    a(href=page.rawFilename) EN
-                    a(href=env.relative(page.url, '../' + page.rawFilename)) FR
+            - if( pageType != 'article' )
+              li.dropdown
+                a.dropdown-toggle(href="#", data-toggle="dropdown")= language.toUpperCase() + ' '
+                  b.caret
+                ul.dropdown-menu
+                  li
+                    - if( language == 'fr' )
+                      a(href=env.relative(page.url, 'en/' + page.rawFilename)) EN
+                      a(href=page.rawFilename) FR
+                    - else
+                      a(href=page.rawFilename) EN
+                      a(href=env.relative(page.url, '../' + page.rawFilename)) FR
                   
     block header
       
