@@ -11,8 +11,33 @@ block prepend title
 block content
   div.row
     div.col-lg-12
-      h1.page-header= page.title
+      header
+        h1= page.title
+        h4.date
+          span= moment.utc(page.date).format('DD. MMMM YYYY')
+        hr
+        
       
       article.article
         section.content!= typogr(page.html).typogrify()
+        
+      hr
+      
+      div#disqus_thread
+        
+block script
+  script.
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jeremybouny';
+    var disqus_identifier = '!{page.filename}';
+    var disqus_title = '!{page.title}';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  noscript Please enable JavaScript to view the
+    a(href="https://disqus.com/?ref_noscript", rel="nofollow") comments powered by Disqus.
 

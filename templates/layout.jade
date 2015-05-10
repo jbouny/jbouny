@@ -16,10 +16,11 @@ html(lang=language)
       meta(name='robots', content='INDEX, FOLLOW')
       meta(http-equiv='X-UA-Compatible', content='IE=edge')
       meta(name='viewport', content='width=device-width')
-      - if( language == 'fr' )
-        link(rel='alternate', hreflang='en' href=env.relative(page.url, 'en/' + page.rawFilename))
-      - else
-        link(rel='alternate', hreflang='fr' href=env.relative(page.url, '../' + page.rawFilename))
+      - if( pageType != 'article' )
+        - if( language == 'fr' )
+          link(rel='alternate', hreflang='en' href=env.relative(page.url, 'en/' + page.rawFilename))
+        - else
+          link(rel='alternate', hreflang='fr' href=env.relative(page.url, '../' + page.rawFilename))
       title
         block title
           = locals.name
