@@ -4,18 +4,12 @@ date: 2015-05-10 16:51
 template: article.jade
 ---
 
-[Live demo](http://jeremybouny.fr/experiments/screen_space_grid/)
-
-[Full source code](hhttps://github.com/jbouny/projected-grid/blob/master/js/shaders/ScreenSpaceShader.js)
-
-## Problem
-
 When rendering a large terrain, surface water or other elements, we have one problem: How to obtain a great quality when rendering but avoiding too many vertices?
 
 One common way to optimize the number of vertices, is to use a [level of detail (LOD)](http://www.wikiwand.com/en/Level_of_detail) implementation.
 
 
-<img class="img-responsive" style="margin:auto;" src="LOD.png" alt="LOD"/>
+<img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/LOD.png" alt="LOD"/>
 <p style="text-align:center;">
   [LOD implementation](http://openclassrooms.com/forum/sujet/nazara-dynaterrain-recherche-graphiste)
 </p>
@@ -37,7 +31,7 @@ The concept is rather easy. We put a grid in screen space coordinates, and proje
 With this principle, there is no heavy computation and no artifacts.
 
 
-<img class="img-responsive" style="margin:auto;" src="projected_grid.jpg" alt="Projected grid"/>
+<img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/projected_grid.jpg" alt="Projected grid"/>
 <p style="text-align:center;">
   [Illustration of a projected grid](http://habib.wikidot.com/projected-grid-ocean-shader-full-html-version#toc11)
 </p>
@@ -49,12 +43,12 @@ With this principle, there is no heavy computation and no artifacts.
 
 
 <div class="row">
-  <a href="grid_zoom1.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="thumbnails/grid_zoom1.jpg" alt="Projected grid"/></a>
-  <a href="grid_zoom2.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="thumbnails/grid_zoom2.jpg" alt="Projected grid"/></a>
+  <a href="/en/articles/screen_space_grid/grid_zoom1.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_zoom1.jpg" alt="Projected grid"/></a>
+  <a href="/en/articles/screen_space_grid/grid_zoom2.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_zoom2.jpg" alt="Projected grid"/></a>
 </div>
 <div class="row">
-  <a href="grid_zoom3.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="thumbnails/grid_zoom3.jpg" alt="Projected grid"/></a>
-  <a href="grid_zoom4.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="thumbnails/grid_zoom4.jpg" alt="Projected grid"/></a>
+  <a href="/en/articles/screen_space_grid/grid_zoom3.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_zoom3.jpg" alt="Projected grid"/></a>
+  <a href="/en/articles/screen_space_grid/grid_zoom4.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_zoom4.jpg" alt="Projected grid"/></a>
 </div>
 <p style="text-align:center;">
   Several zoom levels with a grid of 64*64
@@ -65,15 +59,15 @@ We can see that the grid looks exactly the same on every zoom level. Only the de
 
 
 <div class="row">
-  <a href="grid_2.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="thumbnails/grid_2.jpg" alt="Projected grid"/></a>
-  <a href="grid_3.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="thumbnails/grid_3.jpg" alt="Projected grid"/></a>
+  <a href="/en/articles/screen_space_grid/grid_2.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_2.jpg" alt="Projected grid"/></a>
+  <a href="/en/articles/screen_space_grid/grid_3.jpg"><img class="img-responsive col-xs-6" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_3.jpg" alt="Projected grid"/></a>
 </div>
 <p style="text-align:center;">
   Rendering the grid of 128*128 with a black material / a water effect
 </p>
 
 
-<a href="grid_5.jpg"><img class="img-responsive" style="margin:auto;" src="thumbnails/grid_5.jpg" alt="Projected grid"/></a>
+<a href="/en/articles/screen_space_grid/grid_5.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_5.jpg" alt="Projected grid"/></a>
 <p style="text-align:center;">
   Close view on water rendering with a projected grid of 256*256
 </p>
@@ -116,7 +110,7 @@ We will use the UV information in order to apply the grid on the screen. The gri
 We also need a way to get the aspect ratio. This information can be extracted from the projection matrix. UVs are in [0;1]. Here, we want the 3D coordinate in camera space.
 
 
-<img class="img-responsive" style="margin:auto;" src="camera_perspective.png" alt="Camera perspective"/>
+<img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/camera_perspective.png" alt="Camera perspective"/>
 <p style="text-align:center;">
   [Perspective projection in camera space](http://www.ntu.edu.sg/home/ehchua/programming/opengl/cg_basicstheory.html)
 </p>
@@ -150,7 +144,7 @@ vec3 point = vec3( coordinates.x, coordinates.y, projectionMatrix[0].x );
 To get the final depth, a ray tracing is necessary.
 
 
-<img class="img-responsive" style="margin:auto;" src="pinhole_camera.png" alt="Pinhole model"/>
+<img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/pinhole_camera.png" alt="Pinhole model"/>
 <p style="text-align:center;">
   [Pinhole model and spaces conversion](https://openmvg.readthedocs.org/en/latest/openMVG/cameras/cameras/)
 </p>
@@ -163,7 +157,7 @@ The ray tracing means that we need to get the 3d ray for each pixel in world spa
 We could set these data with a uniform, but there is an easier way: extract it from available matrices. The view matrix is composed of the rotation and the translation.
 
 
-<img class="img-responsive" style="margin:auto;" src="view_matrix.png" alt="View matrix construction"/>
+<img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/view_matrix.png" alt="View matrix construction"/>
 <p style="text-align:center;">
   [View matrix construction](http://www.ntu.edu.sg/home/ehchua/programming/opengl/cg_basicstheory.html)
 </p>
@@ -218,7 +212,7 @@ vec3 ray = getCamRay( cameraRotation, screenUV );
 The last step consists in computing the intersection between the simulated object (here a plane) and the ray.
 
 
-<img class="img-responsive" style="margin:auto;" src="ray_to_plane.png" alt="Ray to plane"/>
+<img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/ray_to_plane.png" alt="Ray to plane"/>
 <p style="text-align:center;">
   [Ray-plane intersection](http://www.echo-gaming.eu/ray-to-plane-intersection/)
 </p>
@@ -262,7 +256,7 @@ A simulated ray can never cross the plane. We need to check if the intersection 
 A way could be to remove the vertices, but it can't be done in vertex shader. An other solution is to put it at an "infinite" position following the ray direction. We need to define the notion of inifinity for our application.
 
 
-<a href="grid_6.jpg"><img class="img-responsive" style="margin:auto;" src="thumbnails/grid_6.jpg" alt="Infinity with the projected grid"/></a>
+<a href="/en/articles/screen_space_grid/grid_6.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/grid_6.jpg" alt="Infinity with the projected grid"/></a>
 <p style="text-align:center;">
   Infinity setted to 200000, with a grid of 32*32
 </p>
@@ -316,7 +310,7 @@ vertexShader: [
 ```
 
 
-<a href="sunset_ocean_fft.jpg"><img class="img-responsive" style="margin:auto;" src="thumbnails/sunset_ocean_fft.jpg" alt="A trip under the moonlight"/></a>
+<a href="/en/articles/screen_space_grid/sunset_ocean_fft.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/screen_space_grid/thumbnails/sunset_ocean_fft.jpg" alt="A trip under the moonlight"/></a>
 <p style="text-align:center;">
   [A trip under the moonlight](https://jbouny.github.io/fft-ocean/)
 </p>

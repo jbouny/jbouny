@@ -14,12 +14,12 @@ block content
       header
         h1= page.title
         h4.date
-          span= moment.utc(page.date).format('DD. MMMM YYYY')
+          span= moment.utc(page.date).format('LLL')
         hr
         
       
       article.article
-        section.content!= typogr(page.html).typogrify()
+        section.content!= env.relativeMarkdown(typogr(page.html).typogrify())
         
       hr
       

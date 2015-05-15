@@ -10,17 +10,18 @@ block content
 
       - var articles = env.helpers.getArticles(contents)
       each article in articles
+        hr
         article.article.intro
           header
-            p.date
-              span= moment.utc(article.date).format('DD. MMMM YYYY')
             h2
               a(href=env.relative(page.url, article.url))= article.title
-            if article.intro.length > 0
-              | !{ typogr(article.intro).typogrify() }
-            if article.hasMore
-              p.more
-                a(href=env.relative(page.url, article.url)) more
-        hr
+            h4.date
+              span= moment.utc(article.date).format('LLL')
+          if article.intro.length > 0
+            | !{ env.relativeMarkdown(typogr(article.intro).typogrify()) }
+            p ...
+          if article.hasMore
+            p.more
+              a.btn.btn-default.btn-block(href=env.relative(page.url, article.url))= env.helpers.s('LAB_MORE')
 
 

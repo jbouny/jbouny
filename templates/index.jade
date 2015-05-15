@@ -57,6 +57,21 @@ block content
           +display_project(project)
       div.col-lg-12.row
         a.btn.btn-default.btn-block(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url + "#projets"))= env.helpers.s('LAB_MORE')
+        
+    - var articles = env.helpers.getArticles(contents)
+    if( articles.length > 0 )
+      - var article = articles[0]
+      section.row
+        div.col-lg-12
+          header
+            h2.page-header= env.helpers.s('LAB_LASTARTICLE')
+          ul
+            li
+              h4
+                a(href=env.relative(page.url, article.url))
+                  span= article.title
+                span  - 
+                span= moment.utc(article.date).format('LLL')
 
 block script
   script.

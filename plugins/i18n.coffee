@@ -1,5 +1,6 @@
 module.exports = (env, callback) ->
   lang_FR = [
+    'LAB_DESC'            : 'Portail professionnel de Jérémy BOUNY',
     'LAB_KEYWORDS'        : 'Mots clés',
     'LAB_DEMOS'           : 'Démos & Projets',
     'LAB_MORE'            : 'Voir plus',
@@ -11,11 +12,13 @@ module.exports = (env, callback) ->
     'LAB_CONTACT'         : 'Contact',
     'LAB_EXPERIENCES_PRO' : 'Expériences professionnelles',
     'LAB_TOGGLE'          : 'Afficher/cacher le menu',
+    'LAB_LASTARTICLE'     : 'Dernier article',
     
-    'DESC_POSTE'          : 'Ingénieur R&D à Catopsys',
+    'DESC_POSTE'          : 'Ingénieur R&D à Catopsys, Clermont-Ferrand',
     'EXP_GITHUB'          : 'L’ensemble de ces démos sont a retrouver directement sur '
   ]
   lang_EN = [
+    'LAB_DESC'            : 'Professional portal of Jérémy BOUNY',
     'LAB_KEYWORDS'        : 'Keywords',
     'LAB_DEMOS'           : 'Demos & Projects',
     'LAB_MORE'            : 'More',
@@ -27,8 +30,9 @@ module.exports = (env, callback) ->
     'LAB_CONTACT'         : 'Contact',
     'LAB_EXPERIENCES_PRO' : 'Professional experiences',
     'LAB_TOGGLE'          : 'Toggle navigation',
+    'LAB_LASTARTICLE'     : 'Last article',
     
-    'DESC_POSTE'          : 'R&D Engineer at Catopsys',
+    'DESC_POSTE'          : 'R&D Engineer at Catopsys, Clermont-Ferrand, France',
     'EXP_GITHUB'          : 'All this demos can be found on '
   ]
 

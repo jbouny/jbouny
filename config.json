@@ -2,8 +2,7 @@
   "locals": {
     "url": "",
     "name": "Jérémy BOUNY",
-    "owner": "Jérémy BOUNY",
-    "description": "Portail professionnel - Jérémy BOUNY"
+    "owner": "Jérémy BOUNY"
   },
   "plugins": [
     "./plugins/i18n.coffee",
