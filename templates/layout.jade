@@ -46,6 +46,8 @@ html(lang=language)
             li
               a(href=env.relative(page.url, env.i18nContents(contents).index.url))= env.helpers.s('LAB_HOME')
             li
+              a(href=env.relative(page.url, env.i18nContents(contents)['experiments.md'].url))= env.helpers.s('LAB_EXPERIMENTS')
+            li
               a(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url))= env.helpers.s('LAB_EXPERIENCES')
             li
               a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')

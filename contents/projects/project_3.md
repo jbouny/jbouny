@@ -1,7 +1,9 @@
 ---
 title: Ocean
-image: images/projets/thumbnails/ocean.jpg
+image: ocean.jpg
 url: http://jeremybouny.fr/ocean/demo/
 ---
 
-Rendu d'eau simple et léger. Module pour Three.js.
+Rendu d'eau simple, réaliste et léger en WebGL sous forme de module pour Three.js.
+
+Rendu avec fragment shader sans déformation de la géométrie. Prise en compte du reflet sur la surface et de la lumière spéculaire.

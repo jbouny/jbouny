@@ -1,7 +1,9 @@
 ---
 title: Tob the Bot
-image: ../images/projets/thumbnails/tob.jpg
+image: tob.jpg
 url: http://github.com/jbouny/tobthebot
 ---
 
-Web application controlling Tob, a basic robot based on Raspberry. Back end with node.js and websockets communication.
+Tob the Bot managed by a Raspberry PI. Control of two motors via GPIO and web interface.
+
+Node.js backend and communication via websocket.

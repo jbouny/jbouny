@@ -1,4 +1,4 @@
 ---
 template: experiences.jade
-title: Expériences
+title: Expériences professionnelles
 ---

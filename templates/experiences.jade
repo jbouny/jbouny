@@ -7,12 +7,9 @@ block content
   div.row
     div.col-lg-12
       header
-        h1= page.title
+        h1.page-header= page.title
       
-      section.row
-        header.col-lg-12
-          h2.page-header#experience= env.helpers.s('LAB_EXPERIENCES_PRO')
-        
+      section.row        
         mixin display_experience(experience)
           article.col-md-4.col-sm-12.experience
             div.panel.panel-default
@@ -32,27 +29,3 @@ block content
             while j++ < 3 && i < length
               +display_experience(experiences[i])
               - i++
-                
-      section.row
-        header.col-lg-12
-          h2.page-header#projets= env.helpers.s('LAB_DEMOS')
-          
-        p.col-lg-12= env.helpers.s('EXP_GITHUB')
-          a(href="https://github.com/jbouny") GitHub 
-            img(src=env.relative(page.url, contents.images.icons['github.png'].url), alt="GitHub")
-        
-        mixin display_project(project)
-          article.col-lg-3.col-md-3.col-sm-6
-            div.media
-              div.pull-left
-                a(href=project.metadata.url, target="_blank")
-                  img(src=project.metadata.image, alt=project.title)
-              div.media-body
-                header
-                  h4.media-heading
-                    a(href=project.metadata.url, target="_blank")= project.title
-                | !{ typogr(project.html).typogrify() }
-        
-        - var projects = env.helpers.getProjects(contents)
-        each project in projects
-          +display_project(project)

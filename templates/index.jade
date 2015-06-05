@@ -44,19 +44,19 @@ block content
           div.media
             div.pull-left
               a(href=project.metadata.url, target="_blank")
-                img(src=project.metadata.image, alt=project.title)
+                img(src=env.relative(page.url, '/images/projets/thumbnails/' + project.metadata.image), alt=project.title)
             div.media-body
               h4.media-heading
                 a(href=project.metadata.url, target="_blank")= project.title
               p
-                | !{ typogr(project.html.substring(0, 50)).typogrify() }...
+                | !{ typogr(project.html.substring(0, 70)).typogrify() }...
           
       div.row
         - var projects = env.helpers.getProjects(contents)
         each project in projects.slice(0, 4)
           +display_project(project)
       div.col-lg-12.row
-        a.btn.btn-default.btn-block(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url + "#projets"))= env.helpers.s('LAB_MORE')
+        a.btn.btn-default.btn-block(href=env.relative(page.url, env.i18nContents(contents)['experiments.md'].url + "#projets"))= env.helpers.s('LAB_MORE')
         
     - var articles = env.helpers.getArticles(contents)
     if( articles.length > 0 )

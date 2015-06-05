@@ -1,7 +1,9 @@
 ---
 title: A Scalable Web Tetris
-image: ../images/projets/thumbnails/asw-tetris.jpg
+image: asw-tetris.jpg
 url: http://jeremybouny.fr/tetris
 ---
 
-Scalable wet tetris with different views: ASCII / 2D / 3D
+Implementation of a modular Tetris game. Strong separation between the view layer and the logic layer, allowing view selection on the fly.
+
+Views realized in ASCII Art / 2D canvas / WebGL.

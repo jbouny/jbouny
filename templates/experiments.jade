@@ -1,0 +1,36 @@
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+  
+block content
+  div.row
+    div.col-lg-12
+      header
+        h1.page-header#projets= page.title
+      
+      section.row    
+        p.col-lg-12= env.helpers.s('EXP_GITHUB')
+          a(href="https://github.com/jbouny") GitHub 
+            img(src=env.relative(page.url, contents.images.icons['github.png'].url), alt="GitHub")
+        
+        mixin display_project(project)
+          article.col-sm-6
+            header
+              div.col-lg-12
+                h3.media-heading
+                  a(href=project.metadata.url, target="_blank")= project.title
+            div.col-lg-12
+              a(href=project.metadata.url, target="_blank")
+                img.img-responsive(src=env.relative(page.url, '/images/projets/big-thumbnails/' + project.metadata.image), alt=project.title)
+            div.col-lg-12
+              | !{ typogr(project.html).typogrify() }
+        
+        - var projects = env.helpers.getProjects(contents)
+        - var i = 0, length = projects.length
+        while i < length
+          - var j = 0
+          div.row
+            while j++ < 2 && i < length
+              +display_project(projects[i])
+              - i++

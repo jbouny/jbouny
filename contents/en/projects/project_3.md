@@ -1,7 +1,9 @@
 ---
 title: Ocean
-image: ../images/projets/thumbnails/ocean.jpg
+image: ocean.jpg
 url: http://jeremybouny.fr/ocean/demo/
 ---
 
-Simple and light water rendering. Three.js module.
+Basic WebGL water rendering, realistic and lightweight as a module for Three.js.
+
+Rendered with fragment shader without deforming geometry. Taking into account of reflection on the surface and specular light.

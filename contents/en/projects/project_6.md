@@ -1,7 +1,9 @@
 ---
 title: Landscape generator
-image: ../images/projets/thumbnails/terrain-gen.jpg
+image: terrain-gen.jpg
 url: http://jeremybouny.fr/terrain-generator/demo/
 ---
 
-Simple and scalable landscape generator module  for three.js.
+WebGL low-poly landscape generator and scalable module for Three.js.
+
+Possibilities of extending with the selection of the noise generation, adding filters, effects and color generation.

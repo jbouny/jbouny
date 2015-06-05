@@ -5,6 +5,7 @@ module.exports = (env, callback) ->
     'LAB_DEMOS'           : 'Démos & Projets',
     'LAB_MORE'            : 'Voir plus',
     'LAB_HOME'            : 'Accueil',
+    'LAB_EXPERIMENTS'     : 'Expérimentations',
     'LAB_EXPERIENCES'     : 'Expériences',
     'LAB_COMPETENCES'     : 'Compétences',
     'LAB_FORMATIONS'      : 'Formations',
@@ -15,7 +16,7 @@ module.exports = (env, callback) ->
     'LAB_LASTARTICLE'     : 'Dernier article',
     
     'DESC_POSTE'          : 'Ingénieur R&D à Catopsys, Clermont-Ferrand',
-    'EXP_GITHUB'          : 'L’ensemble de ces démos sont a retrouver directement sur '
+    'EXP_GITHUB'          : 'L’ensemble de ces expérimentations sont a retrouver directement sur '
   ]
   lang_EN = [
     'LAB_DESC'            : 'Professional portal of Jérémy BOUNY',
@@ -23,6 +24,7 @@ module.exports = (env, callback) ->
     'LAB_DEMOS'           : 'Demos & Projects',
     'LAB_MORE'            : 'More',
     'LAB_HOME'            : 'Home',
+    'LAB_EXPERIMENTS'     : 'Experiments',
     'LAB_EXPERIENCES'     : 'Experiences',
     'LAB_COMPETENCES'     : 'Skills',
     'LAB_FORMATIONS'      : 'Education',
@@ -33,7 +35,7 @@ module.exports = (env, callback) ->
     'LAB_LASTARTICLE'     : 'Last article',
     
     'DESC_POSTE'          : 'R&D Engineer at Catopsys, Clermont-Ferrand, France',
-    'EXP_GITHUB'          : 'All this demos can be found on '
+    'EXP_GITHUB'          : 'All these experiments can be found on '
   ]
 
   # assign defaults any option not set in the config file
