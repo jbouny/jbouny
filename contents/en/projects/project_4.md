@@ -1,9 +1,9 @@
 ---
-title: Tob the Bot
-image: tob.jpg
-url: http://github.com/jbouny/tobthebot
+title: RunRun
+image: runrun.jpg
+url: http://jeremybouny.fr/runrun
 ---
 
-Tob the Bot managed by a Raspberry PI. Control of two motors via GPIO and web interface.
+WebGL runner concept in low-poly. Physics based on a Box2D port via emscripten.
 
-Node.js backend and communication via websocket.
+Uses the Three.js library, landscape generator and ocean module.

@@ -1,9 +1,9 @@
 ---
-title: RunRun
-image: runrun.jpg
-url: http://jeremybouny.fr/runrun
+title: Tob the Bot
+image: tob.jpg
+url: http://github.com/jbouny/tobthebot
 ---
 
-Concept de runner WebGL 3D en low-poly. Physique basée sur un port de Box2D via emscripten.
+Tob le Robot géré par un Raspberry PI. Contrôle des deux moteurs via GPIO et interface web.
 
-Utilisation de la bibliothèque Three.js, du générateur de terrain et de l'océan.
+Back end node.js et communication via websocket.

@@ -18,8 +18,9 @@ block content
           article.col-sm-6
             header
               div.col-lg-12
-                h3.media-heading
+                h3
                   a(href=project.metadata.url, target="_blank")= project.title
+                  hr
             div.col-lg-12
               a(href=project.metadata.url, target="_blank")
                 img.img-responsive(src=env.relative(page.url, '/images/projets/big-thumbnails/' + project.metadata.image), alt=project.title)

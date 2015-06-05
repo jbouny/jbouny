@@ -1,9 +1,9 @@
 ---
-title: A trip under the moonlight
-image: ocean_fft.jpg
-url: http://jbouny.github.io/fft-ocean/
+title: A Scalable Web Tetris
+image: asw-tetris.jpg
+url: http://jeremybouny.fr/tetris
 ---
 
-Simulation d'un océan en WebGL avec génération d'une map de déplacement via transformation de fourier, appliquée sur une grille en coordonnées écran projetée en 3D.
+Implémentation d'un jeu Tetris modulaire. Forte séparation de la vue et de la couche logique, permettant une sélection à la volée de la vue.
 
-Voyage sur cet océan et dans cet environnement personnalisable avec le contrôle d'un bateau. Utilisation de la bibliothèque Three.js.
+Vues réalisées en ASCII Art / en canvas 2D / en WebGL.

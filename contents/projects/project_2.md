@@ -1,9 +1,9 @@
 ---
-title: Colorblinder
-image: colorblinder.jpg
-url: http://jbouny.github.io/colorblinder
+title: Gravitris
+image: gravitris.jpg
+url: http://jeremybouny.fr/gravitris
 ---
 
-Service en ligne de simulation de la vue d'un daltonien sur le Web pour la sensibilisation et pour aider les web designer.
+Fork de l'implémentation du jeu Tetris avec l'ajout de physique.
 
-Sélection de l'anomalie et visualisation de la page avec un filtre SVG modifiant le rendu des couleurs. Intégration des pages via différentes méthodes pour contrer les sécurités des navigateurs.
+Physique basée sur un port de Box2D via emscripten.

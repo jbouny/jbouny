@@ -1,9 +1,9 @@
 ---
-title: A Scalable Web Tetris
-image: asw-tetris.jpg
-url: http://jeremybouny.fr/tetris
+title: Colorblinder
+image: colorblinder.jpg
+url: http://jbouny.github.io/colorblinder
 ---
 
-Implementation of a modular Tetris game. Strong separation between the view layer and the logic layer, allowing view selection on the fly.
+Color blindness simulator as a web service for web developers and raising awareness.
 
-Views realized in ASCII Art / 2D canvas / WebGL.
+Selection of the abnormality and view of the web page with a SVG filter altering the color rendering. Load web page via several ways in order to bypass browser safeties.

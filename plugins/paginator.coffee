@@ -16,6 +16,9 @@ module.exports = (env, callback) ->
     
   orderByFileName = (array) ->
     return array.sort (a, b) -> b.filename < a.filename
+    
+  orderByFileNameDesc = (array) ->
+    return array.sort (a, b) -> b.filename > a.filename
 
   getArticles = (contents) ->
     # helper that returns a list of articles found in *contents*
@@ -37,7 +40,7 @@ module.exports = (env, callback) ->
     pages = []
     for key, value of env.i18nContents(contents)['projects']
       pages.push value if value instanceof env.plugins.Page
-    return orderByFileName(pages)
+    return orderByFileNameDesc(pages)
 
   getExperiences = (contents) ->
     pages = []

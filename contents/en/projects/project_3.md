@@ -1,9 +1,9 @@
 ---
-title: Ocean
-image: ocean.jpg
-url: http://jeremybouny.fr/ocean/demo/
+title: Landscape generator
+image: terrain-gen.jpg
+url: http://jeremybouny.fr/terrain-generator/demo/
 ---
 
-Basic WebGL water rendering, realistic and lightweight as a module for Three.js.
+WebGL low-poly landscape generator and scalable module for Three.js.
 
-Rendered with fragment shader without deforming geometry. Taking into account of reflection on the surface and specular light.
+Possibilities of extending with the selection of the noise generation, adding filters, effects and color generation.

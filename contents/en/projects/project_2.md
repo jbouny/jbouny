@@ -1,9 +1,9 @@
 ---
-title: Colorblinder
-image: colorblinder.jpg
-url: http://jbouny.github.io/colorblinder
+title: Gravitris
+image: gravitris.jpg
+url: http://jeremybouny.fr/gravitris
 ---
 
-Color blindness simulator as a web service for web developers and raising awareness.
+Fork of the Tetris game with the add of physics.
 
-Selection of the abnormality and view of the web page with a SVG filter altering the color rendering. Load web page via several ways in order to bypass browser safeties.
+Physics based on a Box2D port via emscripten.

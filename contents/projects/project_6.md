@@ -1,9 +1,9 @@
 ---
-title: Générateur de terrain
-image: terrain-gen.jpg
-url: http://jeremybouny.fr/terrain-generator/demo/
+title: Ocean
+image: ocean.jpg
+url: http://jeremybouny.fr/ocean/demo/
 ---
 
-Module WebGL de génération de terrain low-poly et modulaire pour Three.js.
+Rendu d'eau simple, réaliste et léger en WebGL sous forme de module pour Three.js.
 
-Possibilités d'extensions avec la sélection de la génération du bruit, l'ajout de filtres, d'effets et de la génération de la couleur.
+Rendu avec fragment shader sans déformation de la géométrie. Prise en compte du reflet sur la surface et de la lumière spéculaire.
