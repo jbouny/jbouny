@@ -49,15 +49,19 @@ html(lang=language)
             li
               a(href=env.relative(page.url, env.i18nContents(contents)['experiments.md'].url))= env.helpers.s('LAB_EXPERIMENTS')
             li
-              a(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url))= env.helpers.s('LAB_EXPERIENCES')
-            li
-              a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')
-            li
-              a(href=env.relative(page.url, env.i18nContents(contents)['formations.md'].url))= env.helpers.s('LAB_FORMATIONS')
-            li
               a(href=env.relative(page.url, env.i18nContents(contents)['blog.md'].url))= env.helpers.s('LAB_BLOG')
             li
               a(href=env.relative(page.url, env.i18nContents(contents)['contact.md'].url))= env.helpers.s('LAB_CONTACT')
+            li.dropdown
+                a.dropdown-toggle(href="#", data-toggle="dropdown")= env.helpers.s('LAB_ABOUT')
+                  b.caret
+                ul.dropdown-menu
+                  li
+                    a(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url))= env.helpers.s('LAB_EXPERIENCES')
+                  li
+                    a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')
+                  li
+                    a(href=env.relative(page.url, env.i18nContents(contents)['formations.md'].url))= env.helpers.s('LAB_FORMATIONS')
             - if( pageType != 'article' )
               li.dropdown
                 a.dropdown-toggle(href="#", data-toggle="dropdown")= language.toUpperCase() + ' '

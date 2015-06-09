@@ -11,12 +11,10 @@ block prepend title
 block content
   div.row
     div.col-lg-12
-      header
+      header.page-header
         h1= page.title
         h4.date
           span= moment.utc(page.date).format('LLL')
-        hr
-        
       
       article.article
         section.content!= env.relativeMarkdown(typogr(page.html).typogrify())
