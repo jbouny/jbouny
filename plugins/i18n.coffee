@@ -13,7 +13,7 @@ module.exports = (env, callback) ->
     'LAB_CONTACT'         : 'Contact',
     'LAB_EXPERIENCES_PRO' : 'Expériences professionnelles',
     'LAB_TOGGLE'          : 'Afficher/cacher le menu',
-    'LAB_LASTARTICLE'     : 'Dernier article',
+    'LAB_LASTARTICLE'     : 'Derniers articles',
     
     'DESC_POSTE'          : 'Ingénieur R&D à Catopsys, Clermont-Ferrand',
     'EXP_GITHUB'          : 'L’ensemble de ces expérimentations sont a retrouver directement sur '
@@ -32,7 +32,7 @@ module.exports = (env, callback) ->
     'LAB_CONTACT'         : 'Contact',
     'LAB_EXPERIENCES_PRO' : 'Professional experiences',
     'LAB_TOGGLE'          : 'Toggle navigation',
-    'LAB_LASTARTICLE'     : 'Last article',
+    'LAB_LASTARTICLE'     : 'Latest articles',
     
     'DESC_POSTE'          : 'R&D Engineer at Catopsys, Clermont-Ferrand, France',
     'EXP_GITHUB'          : 'All these experiments can be found on '

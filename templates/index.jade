@@ -60,18 +60,20 @@ block content
         
     - var articles = env.helpers.getArticles(contents)
     if( articles.length > 0 )
-      - var article = articles[0]
       section
         div.col-lg-12
           header
             h2.page-header= env.helpers.s('LAB_LASTARTICLE')
           ul
-            li
-              h4
-                a(href=env.relative(page.url, article.url))
-                  span= article.title
-                span  - 
-                span= moment.utc(article.date).format('LLL')
+            - var i = 0, length = projects.length
+            while i < length && i < 2
+              - var article = articles[i++]
+              li
+                h4
+                  a(href=env.relative(page.url, article.url))
+                    span= article.title
+                  span  - 
+                  span= moment.utc(article.date).format('LLL')
 
 block script
   script.
