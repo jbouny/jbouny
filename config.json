@@ -18,6 +18,7 @@
     "pretty": true
   },
   "markdown": {
+    "gfm": true,
     "smartLists": true,
     "smartypants": true
   },
