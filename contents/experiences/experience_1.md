@@ -1,5 +1,5 @@
 ---
-date: Depuis 09/2014
+date: 09/2014 - 08/2015
 title: Ingénieur Recherche
 location: Catopsys
 image: images/catopsys_h.jpg

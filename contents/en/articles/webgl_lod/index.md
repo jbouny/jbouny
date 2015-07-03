@@ -1,6 +1,6 @@
 ---
 title: WebGL LOD implementation
-date: 2015-06-08 09:19
+date: 2015-06-09 18:56
 template: article.jade
 ---
 

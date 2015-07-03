@@ -16,8 +16,8 @@ module.exports = (env, callback) ->
     'LAB_TOGGLE'          : 'Afficher/cacher le menu',
     'LAB_LASTARTICLE'     : 'Derniers articles',
     
-    'DESC_POSTE'          : 'Ingénieur R&D à Catopsys, Clermont-Ferrand',
-    'EXP_GITHUB'          : 'L’ensemble de ces expérimentations sont a retrouver directement sur '
+    'DESC_POSTE'          : 'Dévelopeur logiciel à Allegorithmic, Clermont-Ferrand',
+    'EXP_GITHUB'          : 'L’ensemble de ces expérimentations sont à retrouver directement sur '
   ]
   lang_EN = [
     'LAB_DESC'            : 'Professional portal of Jérémy BOUNY',
@@ -36,7 +36,7 @@ module.exports = (env, callback) ->
     'LAB_TOGGLE'          : 'Toggle navigation',
     'LAB_LASTARTICLE'     : 'Latest articles',
     
-    'DESC_POSTE'          : 'R&D Engineer at Catopsys, Clermont-Ferrand, France',
+    'DESC_POSTE'          : 'Software developer at Allegorithmic, Clermont-Ferrand, France',
     'EXP_GITHUB'          : 'All these experiments can be found on '
   ]
 

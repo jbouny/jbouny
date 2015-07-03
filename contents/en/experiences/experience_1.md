@@ -1,5 +1,5 @@
 ---
-date: Since 09/2014
+date: 09/2014 - 08/2015
 title: R&D Engineer
 location: Catopsys, France
 image: ../images/catopsys_h.jpg
