@@ -2,4 +2,4 @@
 view: none
 ---
 
-&copy;2015 Jérémy BOUNY
+&copy;2016 Jérémy BOUNY

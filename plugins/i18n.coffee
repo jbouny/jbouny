@@ -16,7 +16,7 @@ module.exports = (env, callback) ->
     'LAB_TOGGLE'          : 'Afficher/cacher le menu',
     'LAB_LASTARTICLE'     : 'Derniers articles',
     
-    'DESC_POSTE'          : 'Dévelopeur logiciel à Allegorithmic, Clermont-Ferrand',
+    'DESC_POSTE'          : 'Développeur logiciel à Allegorithmic, Clermont-Ferrand',
     'EXP_GITHUB'          : 'L’ensemble de ces expérimentations sont à retrouver directement sur '
   ]
   lang_EN = [
