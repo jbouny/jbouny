@@ -65,8 +65,8 @@ block content
           header
             h2.page-header= env.helpers.s('LAB_LASTARTICLE')
           ul
-            - var i = 0, length = projects.length
-            while i < length && i < 3
+            - var i = 0, length = articles.length
+            while i < length
               - var article = articles[i++]
               li
                 h4
