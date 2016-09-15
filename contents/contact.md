@@ -12,7 +12,7 @@ Clermont-Ferrand, France
 [jbouny@gmail.com][mail]
 
 [![Linkedin](/makerelative/images/icons/linkedin.png)][linkedin]
-[Linkedin][linkedin]
+[LinkedIn][linkedin]
 
 [![Github](/makerelative/images/icons/github.png)][github]
 [github.com/jbouny][github]
