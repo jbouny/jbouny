@@ -26,78 +26,186 @@ Some pictures from a trip to Iceland in August 2016, also known as "sheep land".
 
 ## Pictures
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_1636.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_1636.jpg"/></a>
+<figcaption><center>Road 435 near Reykjavik</center></figcaption>
+</figure>
 
-
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_1664.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_1664.jpg"/></a>
+<figcaption><center>Road 435 near Þingvallavatn</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_1743.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_1743.jpg"/></a>
+<figcaption><center>Bruarfoss (can be quite hard to find, use GPS coordinates)</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_1766.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_1766.jpg"/></a>
+<figcaption><center>Bruarfoss</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2050.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2050.jpg"/></a>
+<figcaption><center>Keldur farm</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2300.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2300.jpg"/></a>
+<figcaption><center>Reynisfjara beach (near Vík)</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2368.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2368.jpg"/></a>
+<figcaption><center>Reynisfjara beach (near Vík)</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2407.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2407.jpg"/></a>
+<figcaption><center>Vík</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2445.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2445.jpg"/></a>
+<figcaption><center>Dyrhólaey (near Vík)</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2609.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2609.jpg"/></a>
+<figcaption><center>South of the ring road</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2611.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2611.jpg"/></a>
+<figcaption><center>South of the ring road</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2631.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2631.jpg"/></a>
+<figcaption><center>Eldhraun lava field</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2679.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2679.jpg"/></a>
+<figcaption><center>Fjaðrárgljúfur canyon</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2710.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2710.jpg"/></a>
+<figcaption><center>South east of the ring road</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2740.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2740.jpg"/></a>
+<figcaption><center>Near Vatnajökull glacier</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2761.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2761.jpg"/></a>
+<figcaption><center>Svartifoss</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2810.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2810.jpg"/></a>
+<figcaption><center>South east of the ring road</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2849.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2849.jpg"/></a>
+<figcaption><center>Jökulsárlón glacial lake</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_2920.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_2920.jpg"/></a>
+<figcaption><center>South east of the ring road</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3173.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3173.jpg"/></a>
+<figcaption><center>Dettifoss</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3253.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3253.jpg"/></a>
+<figcaption><center>Hiking between Dettifoss and Hafragilsfoss</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3279.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3279.jpg"/></a>
+<figcaption><center>Mývatn lake in background</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3359.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3359.jpg"/></a>
+<figcaption><center>Góðafoss</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3421.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3421.jpg"/></a>
+<figcaption><center>Near Mývatn area</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3720.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3720.jpg"/></a>
+<figcaption><center>Somewhere in the Tröllaskagi peninsula</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3885.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3885.jpg"/></a>
+<figcaption><center>Near Sauðárkrókur</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_3901.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_3901.jpg"/></a>
+<figcaption><center>Glaumbaer</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_4281.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_4281.jpg"/></a>
+<figcaption><center>Glymur</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_4299.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_4299.jpg"/></a>
+<figcaption><center>Glymur</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_4451.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_4451.jpg"/></a>
+<figcaption><center>Somewhere in the Snaefellsnes peninsula</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_4534.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_4534.jpg"/></a>
+<figcaption><center>Selvallavatn waterfall, a real hidden gem (follow the river near the road 56 to Selvallavatn)</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_4940.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_4940.jpg"/></a>
+<figcaption><center>Akranes</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_5102.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_5102.jpg"/></a>
+<figcaption><center>Krísuvík</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_5126.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_5126.jpg"/></a>
+<figcaption><center>Krísuvík</center></figcaption>
+</figure>
 
+<figure>
 <a href="/en/articles/iceland/pictures/DSC_5187.jpg"><img class="img-responsive" style="margin:auto;" src="/en/articles/iceland/thumbnails/DSC_5187.jpg"/></a>
+<figcaption><center>Near Reykjanesviti</center></figcaption>
+</figure>
 
+<figure>
 <div class="row">
 <a href="/en/articles/iceland/pictures/DSC_3799.jpg"><img class="img-responsive col-sm-6" src="/en/articles/iceland/thumbnails/DSC_3799.jpg"/></a>
 <a href="/en/articles/iceland/pictures/DSC_3812.jpg"><img class="img-responsive col-sm-6" src="/en/articles/iceland/thumbnails/DSC_3812.jpg"/></a>
 </div>
+<figcaption><center>Siglufjörður</center></figcaption>
+</figure>
+
