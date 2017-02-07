@@ -1,13 +1,13 @@
 ---
 title: Materials and environments inspiration from Iceland
-date: 2017-02-07 1:44
+date: 2017-02-07 2:44
 template: article.jade
 ---
 
 Here are 44 inspiring pictures taken in Iceland this summer; all in public domain. [Get more info on this trip](/en/articles/iceland/).
 
-<figure style="text-align:center;">
-<img src="/en/articles/iceland_materials/iceland_materials_preview.jpg"/>
+<figure>
+<img class="img-responsive" style="margin:auto" src="/en/articles/iceland_materials/iceland_materials_preview.jpg"/>
 <figcaption><center>Iceland contrast preview</center></figcaption>
 </figure>
 
@@ -57,7 +57,5 @@ Here are 44 inspiring pictures taken in Iceland this summer; all in public domai
 </div>
 
 <script type="text/javascript">
-  window.onload = function() {
-    $('div.no-gutter a').swipebox();
-  }
+window.onload = function() { $('div.no-gutter a').swipebox(); }
 </script>
