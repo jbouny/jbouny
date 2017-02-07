@@ -30,6 +30,7 @@ html(lang=language)
       link(rel='stylesheet', href=env.relative(page.url, contents.css['modern-business.css'].url))
       link(rel='stylesheet', href=env.relative(page.url, contents.css['style.css'].url))
       link(rel='stylesheet', href=env.relative(page.url, contents.css['highlightjs.css'].url))
+      link(rel='stylesheet', href=env.relative(page.url, contents.css['swipebox.min.css'].url))
       
   body.bodyclass
   
@@ -89,6 +90,7 @@ html(lang=language)
               !=env.helpers.getFooter(contents).html
               
     script(src=env.relative(page.url, contents.js['jquery.min.js'].url))
+    script(src=env.relative(page.url, contents.js['jquery.swipebox.min.js'].url))
     script(src=env.relative(page.url, contents.js['bootstrap.min.js'].url))
     
     script.

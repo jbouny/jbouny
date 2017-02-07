@@ -55,3 +55,9 @@ Here are 44 inspiring pictures taken in Iceland this summer; all in public domai
 <figure class="col-sm-6"><a href="/en/articles/iceland_materials/pictures/DSC_3381.jpg"><img class="img-responsive" src="/en/articles/iceland_materials/thumbnails/DSC_3381.jpg"/></a></figure>
 <figure class="col-sm-6"><a href="/en/articles/iceland_materials/pictures/DSC_4758.jpg"><img class="img-responsive" src="/en/articles/iceland_materials/thumbnails/DSC_4758.jpg"/></a></figure>
 </div>
+
+<script type="text/javascript">
+  window.onload = function() {
+    $('div.no-gutter a').swipebox();
+  }
+</script>
