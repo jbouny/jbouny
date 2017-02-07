@@ -55,7 +55,7 @@ module.exports = (env, callback) ->
     return orderByFileName(pages)
     
   getFooter = (contents) ->
-    return env.i18nContents(contents)['footer.md']
+    return contents['footer.md']
     
   getSkills = (contents) ->
     return env.i18nContents(contents)['skills.json']

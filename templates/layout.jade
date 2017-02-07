@@ -59,8 +59,8 @@ html(lang=language)
                 ul.dropdown-menu
                   li
                     a(href=env.relative(page.url, env.i18nContents(contents)['experiences.md'].url))= env.helpers.s('LAB_EXPERIENCES')
-                  li
-                    a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')
+                  //-li
+                  //-  a(href=env.relative(page.url, env.i18nContents(contents)['competences.md'].url))= env.helpers.s('LAB_COMPETENCES')
                   li
                     a(href=env.relative(page.url, env.i18nContents(contents)['formations.md'].url))= env.helpers.s('LAB_FORMATIONS')
             - if( pageType != 'article' )
